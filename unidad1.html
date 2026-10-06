@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 1 · Arquitectura de Computadoras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Botón hamburguesa -->
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menú lateral">☰</button>
+
+  <!-- Overlay para móvil -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ===== SIDEBAR (índice de la Unidad 1) ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="badge">Unidad 1</span>
+      <h2>Arquitecturas de cómputo</h2>
+      <p>Índice de temas</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#tema-1-0"><span class="num">01</span> Arquitecturas de cómputo</a>
+      <a href="#tema-1-1"><span class="num">1.1</span> Modelos de arquitecturas</a>
+      <a href="#tema-1-1-1"><span class="num">1.1.1</span> Clásicas</a>
+      <a href="#tema-1-1-2"><span class="num">1.1.2</span> Segmentadas</a>
+      <a href="#tema-1-1-3"><span class="num">1.1.3</span> De multiprocesamiento</a>
+      <a href="#tema-1-2"><span class="num">1.2</span> Análisis de los componentes</a>
+      <a href="#tema-1-2-1"><span class="num">1.2.1</span> Arquitecturas</a>
+      <a href="#tema-1-2-1-1"><span class="num">1.2.1.1</span> Unidad Central de Procesamiento</a>
+      <a href="#tema-1-2-1-2"><span class="num">1.2.1.2</span> Unidad Aritmética Lógica</a>
+      <a href="#tema-1-2-1-3"><span class="num">1.2.1.3</span> Registros</a>
+      <a href="#tema-1-2-1-4"><span class="num">1.2.1.4</span> Buses</a>
+      <a href="#tema-1-2-2"><span class="num">1.2.2</span> Memoria</a>
+      <a href="#tema-1-2-2-1"><span class="num">1.2.2.1</span> Conceptos básicos</a>
+      <a href="#tema-1-2-2-2"><span class="num">1.2.2.2</span> Memoria principal</a>
+      <a href="#tema-1-2-2-3"><span class="num">1.2.2.3</span> Memoria caché</a>
+      <a href="#tema-1-2-3"><span class="num">1.2.3</span> Manejo de entrada/salida</a>
+      <a href="#tema-1-2-3-1"><span class="num">1.2.3.1</span> Módulos E/S</a>
+      <a href="#tema-1-2-3-2"><span class="num">1.2.3.2</span> E/S programada</a>
+      <a href="#tema-1-2-3-3"><span class="num">1.2.3.3</span> E/S por interrupciones</a>
+      <a href="#tema-1-2-3-4"><span class="num">1.2.3.4</span> Acceso directo a memoria</a>
+      <a href="#tema-1-2-3-5"><span class="num">1.2.3.5</span> Canales y procesadores E/S</a>
+      <a href="#tema-1-2-4"><span class="num">1.2.4</span> Buses</a>
+      <a href="#tema-1-2-4-1"><span class="num">1.2.4.1</span> Tipos de buses</a>
+      <a href="#tema-1-2-4-2"><span class="num">1.2.4.2</span> Estructura de los buses</a>
+      <a href="#tema-1-2-4-3"><span class="num">1.2.4.3</span> Jerarquías de buses</a>
+      <a href="#tema-1-2-5"><span class="num">1.2.5</span> Interrupciones</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="menu.html" class="back-home">← Volver al menú principal</a>
+    </div>
+  </aside>
+
+  <!-- ===== CONTENIDO DE LA UNIDAD ===== -->
+  <div class="app">
+    <main class="main-content">
+
+      <!-- Encabezado de la unidad -->
+      <header class="unit-hero">
+        <span class="badge">Unidad 1</span>
+        <h1>Arquitecturas de cómputo</h1>
+        <p>Todo el contenido de la unidad en una sola página</p>
+      </header>
+
+      <!-- ========== TEMA 01 ========== -->
+      <section id="tema-1-0" class="tema">
+        <span class="tema-num">01</span>
+        <h2>Arquitecturas de cómputo</h2>
+        <p>Aquí va la introducción de la unidad. Puedes escribir texto, agregar imágenes, videos, tablas, código, etc.</p>
+
+        <!-- Ejemplo de imagen (descomenta cuando tengas la imagen) -->
+        <!-- <img src="imagenes/arquitectura.png" alt="Arquitectura básica"> -->
+
+        <!-- Ejemplo de video de YouTube (reemplaza XXXXX por el ID del video) -->
+        <!-- <iframe width="100%" height="400" src="https://www.youtube.com/embed/XXXXX" frameborder="0" allowfullscreen></iframe> -->
+      </section>
+
+      <!-- ========== TEMA 1.1 ========== -->
+      <section id="tema-1-1" class="tema">
+        <span class="tema-num">1.1</span>
+        <h2>Modelos de arquitecturas</h2>
+        <p>Contenido del tema 1.1. Aquí explicarás los diferentes modelos de arquitecturas de cómputo.</p>
+      </section>
+
+      <section id="tema-1-1-1" class="tema tema-sub">
+        <span class="tema-num">1.1.1</span>
+        <h3>Clásicas</h3>
+        <p>Contenido del subtema 1.1.1. Aquí va la explicación de las arquitecturas clásicas.</p>
+      </section>
+
+      <section id="tema-1-1-2" class="tema tema-sub">
+        <span class="tema-num">1.1.2</span>
+        <h3>Segmentadas</h3>
+        <p>Contenido del subtema 1.1.2. Aquí va la explicación de las arquitecturas segmentadas (pipeline).</p>
+      </section>
+
+      <section id="tema-1-1-3" class="tema tema-sub">
+        <span class="tema-num">1.1.3</span>
+        <h3>De multiprocesamiento</h3>
+        <p>Contenido del subtema 1.1.3. Aquí va la explicación de las arquitecturas de multiprocesamiento.</p>
+      </section>
+
+      <!-- ========== TEMA 1.2 ========== -->
+      <section id="tema-1-2" class="tema">
+        <span class="tema-num">1.2</span>
+        <h2>Análisis de los componentes</h2>
+        <p>Contenido del tema 1.2. Aquí explicarás los componentes principales de una computadora.</p>
+      </section>
+
+      <section id="tema-1-2-1" class="tema tema-sub">
+        <span class="tema-num">1.2.1</span>
+        <h3>Arquitecturas</h3>
+        <p>Contenido del subtema 1.2.1. Aquí va la explicación general de las arquitecturas de componentes.</p>
+      </section>
+
+      <section id="tema-1-2-1-1" class="tema tema-sub2">
+        <span class="tema-num">1.2.1.1</span>
+        <h4>Unidad Central de Procesamiento</h4>
+        <p>Contenido del subtema 1.2.1.1. Aquí va la explicación de la CPU.</p>
+      </section>
+
+      <section id="tema-1-2-1-2" class="tema tema-sub2">
+        <span class="tema-num">1.2.1.2</span>
+        <h4>Unidad Aritmética Lógica</h4>
+        <p>Contenido del subtema 1.2.1.2. Aquí va la explicación de la ALU.</p>
+      </section>
+
+      <section id="tema-1-2-1-3" class="tema tema-sub2">
+        <span class="tema-num">1.2.1.3</span>
+        <h4>Registros</h4>
+        <p>Contenido del subtema 1.2.1.3. Aquí va la explicación de los registros.</p>
+      </section>
+
+      <section id="tema-1-2-1-4" class="tema tema-sub2">
+        <span class="tema-num">1.2.1.4</span>
+        <h4>Buses</h4>
+        <p>Contenido del subtema 1.2.1.4. Aquí va la explicación de los buses del sistema.</p>
+      </section>
+
+      <section id="tema-1-2-2" class="tema tema-sub">
+        <span class="tema-num">1.2.2</span>
+        <h3>Memoria</h3>
+        <p>Contenido del subtema 1.2.2. Aquí va la explicación general de la memoria.</p>
+      </section>
+
+      <section id="tema-1-2-2-1" class="tema tema-sub2">
+        <span class="tema-num">1.2.2.1</span>
+        <h4>Conceptos básicos del manejo de la memoria</h4>
+        <p>Contenido del subtema 1.2.2.1. Aquí va la explicación de los conceptos básicos del manejo de memoria.</p>
+      </section>
+
+      <section id="tema-1-2-2-2" class="tema tema-sub2">
+        <span class="tema-num">1.2.2.2</span>
+        <h4>Memoria principal</h4>
+        <p>Contenido del subtema 1.2.2.2. Aquí va la explicación de la memoria principal (RAM).</p>
+      </section>
+
+      <section id="tema-1-2-2-3" class="tema tema-sub2">
+        <span class="tema-num">1.2.2.3</span>
+        <h4>Memoria caché</h4>
+        <p>Contenido del subtema 1.2.2.3. Aquí va la explicación de la memoria caché.</p>
+      </section>
+
+      <section id="tema-1-2-3" class="tema tema-sub">
+        <span class="tema-num">1.2.3</span>
+        <h3>Manejo de la entrada/salida</h3>
+        <p>Contenido del subtema 1.2.3. Aquí va la explicación general del manejo de E/S.</p>
+      </section>
+
+      <section id="tema-1-2-3-1" class="tema tema-sub2">
+        <span class="tema-num">1.2.3.1</span>
+        <h4>Módulos de entrada/salida</h4>
+        <p>Contenido del subtema 1.2.3.1. Aquí va la explicación de los módulos de E/S.</p>
+      </section>
+
+      <section id="tema-1-2-3-2" class="tema tema-sub2">
+        <span class="tema-num">1.2.3.2</span>
+        <h4>Entrada/salida programada</h4>
+        <p>Contenido del subtema 1.2.3.2. Aquí va la explicación de la E/S programada.</p>
+      </section>
+
+      <section id="tema-1-2-3-3" class="tema tema-sub2">
+        <span class="tema-num">1.2.3.3</span>
+        <h4>Entrada/salida mediante interrupciones</h4>
+        <p>Contenido del subtema 1.2.3.3. Aquí va la explicación de la E/S por interrupciones.</p>
+      </section>
+
+      <section id="tema-1-2-3-4" class="tema tema-sub2">
+        <span class="tema-num">1.2.3.4</span>
+        <h4>Acceso directo a memoria</h4>
+        <p>Contenido del subtema 1.2.3.4. Aquí va la explicación del DMA.</p>
+      </section>
+
+      <section id="tema-1-2-3-5" class="tema tema-sub2">
+        <span class="tema-num">1.2.3.5</span>
+        <h4>Canales y procesadores de entrada/salida</h4>
+        <p>Contenido del subtema 1.2.3.5. Aquí va la explicación de los canales y procesadores de E/S.</p>
+      </section>
+
+      <section id="tema-1-2-4" class="tema tema-sub">
+        <span class="tema-num">1.2.4</span>
+        <h3>Buses</h3>
+        <p>Contenido del subtema 1.2.4. Aquí va la explicación general de los buses.</p>
+      </section>
+
+      <section id="tema-1-2-4-1" class="tema tema-sub2">
+        <span class="tema-num">1.2.4.1</span>
+        <h4>Tipos de buses</h4>
+        <p>Contenido del subtema 1.2.4.1. Aquí va la explicación de los tipos de buses.</p>
+      </section>
+
+      <section id="tema-1-2-4-2" class="tema tema-sub2">
+        <span class="tema-num">1.2.4.2</span>
+        <h4>Estructura de los buses</h4>
+        <p>Contenido del subtema 1.2.4.2. Aquí va la explicación de la estructura de los buses.</p>
+      </section>
+
+      <section id="tema-1-2-4-3" class="tema tema-sub2">
+        <span class="tema-num">1.2.4.3</span>
+        <h4>Jerarquías de buses</h4>
+        <p>Contenido del subtema 1.2.4.3. Aquí va la explicación de las jerarquías de buses.</p>
+      </section>
+
+      <section id="tema-1-2-5" class="tema tema-sub">
+        <span class="tema-num">1.2.5</span>
+        <h3>Interrupciones</h3>
+        <p>Contenido del subtema 1.2.5. Aquí va la explicación de las interrupciones.</p>
+      </section>
+
+      <!-- Pie de la unidad -->
+      <div class="unit-footer">
+        <a href="menu.html" class="back-link">← Volver al menú principal</a>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
