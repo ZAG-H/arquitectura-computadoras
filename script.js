@@ -143,6 +143,12 @@
     if (href === path) item.classList.add('active');
   });
 
+  document.querySelectorAll('.nav-main-link').forEach(link => {
+    if (link.getAttribute('href') === path) {
+      link.closest('.nav-item-header')?.classList.add('active');
+    }
+  });
+
     /* =====================================================
      ACORDEÓN DE UNIDADES
   ===================================================== */
@@ -168,6 +174,7 @@
     const willOpen = (typeof forceOpen === 'boolean') ? forceOpen : !submenu.classList.contains('open');
     submenu.classList.toggle('open', willOpen);
     chevron.classList.toggle('open', willOpen);
+    chevron.setAttribute('aria-expanded', String(willOpen));
 
     const state = getAccordionState();
     state[groupId] = willOpen;

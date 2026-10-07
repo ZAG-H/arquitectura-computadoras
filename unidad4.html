@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 4 · Arquitectura de Computadoras</title>
+  <link rel="stylesheet" href="unidades.css">
+</head>
+<body>
+
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menú lateral">☰</button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="badge">Unidad 4</span>
+      <h2>Procesamiento paralelo</h2>
+      <p>Índice de temas</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#tema-4-0"><span class="num">04</span> Procesamiento paralelo</a>
+      <a href="#tema-4-1"><span class="num">4.1</span> Aspectos básicos de la computación paralela</a>
+      <a href="#tema-4-1-1"><span class="num">4.1.1</span> Objetivos del procesamiento paralelo</a>
+      <a href="#tema-4-1-2"><span class="num">4.1.2</span> Paralelismo de datos</a>
+      <a href="#tema-4-1-3"><span class="num">4.1.3</span> Paralelismo de tareas</a>
+      <a href="#tema-4-1-4"><span class="num">4.1.4</span> Ventajas y desventajas</a>
+      <a href="#tema-4-2"><span class="num">4.2</span> Tipos de computación paralela</a>
+      <a href="#tema-4-2-1"><span class="num">4.2.1</span> Taxonomía de Flynn</a>
+      <a href="#tema-4-sisd"><span class="num">SISD</span> Single Instruction, Single Data</a>
+      <a href="#tema-4-simd"><span class="num">SIMD</span> Single Instruction, Multiple Data</a>
+      <a href="#tema-4-misd"><span class="num">MISD</span> Multiple Instruction, Single Data</a>
+      <a href="#tema-4-mimd"><span class="num">MIMD</span> Multiple Instruction, Multiple Data</a>
+      <a href="#tema-4-2-2"><span class="num">4.2.2</span> Arquitectura secuencial</a>
+      <a href="#tema-4-secuencial"><span class="num">4.2.2</span> Funcionamiento secuencial</a>
+      <a href="#tema-4-limitaciones"><span class="num">4.2.2</span> Limitaciones</a>
+      <a href="#tema-4-2-3"><span class="num">4.2.3</span> Organización de direcciones de memoria</a>
+      <a href="#tema-4-memoria-compartida"><span class="num">4.2.3</span> Memoria compartida</a>
+      <a href="#tema-4-memoria-distribuida"><span class="num">4.2.3</span> Memoria distribuida</a>
+      <a href="#tema-4-3"><span class="num">4.3</span> Sistemas de memoria compartida</a>
+      <a href="#tema-4-3-1"><span class="num">4.3.1</span> Ventajas y desventajas</a>
+      <a href="#tema-4-3-2"><span class="num">4.3.2</span> Redes de interconexión dinámica</a>
+      <a href="#tema-4-medio-compartido"><span class="num">4.3.2</span> Medio compartido</a>
+      <a href="#tema-4-redes-conmutadas"><span class="num">4.3.2</span> Redes conmutadas</a>
+      <a href="#tema-4-4"><span class="num">4.4</span> Sistemas de memoria distribuida</a>
+      <a href="#tema-4-4-1"><span class="num">4.4.1</span> Comunicación entre procesadores</a>
+      <a href="#tema-4-4-2"><span class="num">4.4.2</span> Ventajas y desventajas</a>
+      <a href="#tema-4-4-3"><span class="num">4.4.3</span> Redes de interconexión estáticas</a>
+      <a href="#tema-4-malla"><span class="num">4.4.3</span> Topología en malla</a>
+      <a href="#tema-4-anillo"><span class="num">4.4.3</span> Topología en anillo</a>
+      <a href="#tema-4-hipercubo"><span class="num">4.4.3</span> Topología hipercubo</a>
+      <a href="#tema-4-5"><span class="num">4.5</span> Casos para estudio</a>
+      <a href="#tema-4-5-1"><span class="num">4.5.1</span> Multiprocesadores</a>
+      <a href="#tema-4-5-2"><span class="num">4.5.2</span> Multicomputadores</a>
+      <a href="#tema-4-5-3"><span class="num">4.5.3</span> Redes de interconexión</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="back-home">← Volver al menú principal</a>
+    </div>
+  </aside>
+
+  <div class="app">
+    <main class="main-content">
+      <header class="unit-hero">
+        <span class="badge">Unidad 4</span>
+        <h1>Procesamiento paralelo</h1>
+        <p>Principios, arquitecturas y redes para ejecutar procesos de forma concurrente.</p>
+      </header>
+
+      <section id="tema-4-0" class="tema">
+        <span class="tema-num">04</span>
+        <h2>Procesamiento paralelo</h2>
+        <p>El procesamiento paralelo utiliza varios elementos de cómputo para resolver partes de un problema al mismo tiempo. Su diseño combina procesadores, memoria y redes de interconexión para aumentar el rendimiento y atender tareas de mayor escala.</p>
+      </section>
+
+      <section id="tema-4-1" class="tema">
+        <span class="tema-num">4.1</span>
+        <h2>Aspectos básicos de la computación paralela</h2>
+        <p>Una tarea se divide en operaciones que pueden ejecutarse concurrentemente. Para obtener beneficios, es necesario identificar esa concurrencia y coordinar el trabajo, los datos y la comunicación entre procesadores.</p>
+      </section>
+
+      <section id="tema-4-1-1" class="tema tema-sub">
+        <span class="tema-num">4.1.1</span>
+        <h3>Objetivos del procesamiento paralelo</h3>
+        <p>El objetivo principal es reducir el tiempo de ejecución y aumentar la cantidad de trabajo que un sistema puede completar. También permite abordar problemas más grandes al combinar recursos de cómputo y mejorar la capacidad de respuesta.</p>
+      </section>
+
+      <section id="tema-4-1-2" class="tema tema-sub">
+        <span class="tema-num">4.1.2</span>
+        <h3>Paralelismo de datos</h3>
+        <p>En el paralelismo de datos, una misma operación se aplica al mismo tiempo sobre diferentes partes de un conjunto de datos. Es común en cálculos científicos, procesamiento de imágenes y operaciones vectoriales o de GPU.</p>
+      </section>
+
+      <section id="tema-4-1-3" class="tema tema-sub">
+        <span class="tema-num">4.1.3</span>
+        <h3>Paralelismo de tareas</h3>
+        <p>El paralelismo de tareas asigna operaciones distintas a diferentes procesadores o núcleos. Las tareas pueden trabajar sobre datos diferentes y comunicarse cuando necesitan compartir resultados o coordinar su ejecución.</p>
+      </section>
+
+      <section id="tema-4-1-4" class="tema tema-sub">
+        <span class="tema-num">4.1.4</span>
+        <h3>Ventajas y desventajas de la computación paralela</h3>
+        <p>Puede reducir tiempos de respuesta, aumentar el rendimiento y escalar la capacidad del sistema. A cambio, requiere coordinar tareas, sincronizar datos y gestionar comunicación; además, no todos los problemas pueden dividirse de forma eficiente y el hardware puede elevar costos y consumo.</p>
+      </section>
+
+      <section id="tema-4-2" class="tema">
+        <span class="tema-num">4.2</span>
+        <h2>Tipos de computación paralela</h2>
+        <p>Las arquitecturas paralelas se pueden clasificar según la cantidad de flujos de instrucciones y de datos que procesan. También se comparan con arquitecturas secuenciales y con distintas formas de organizar la memoria.</p>
+      </section>
+
+      <section id="tema-4-2-1" class="tema tema-sub">
+        <span class="tema-num">4.2.1</span>
+        <h3>Clasificación: Taxonomía de Flynn</h3>
+        <p>La taxonomía de Flynn clasifica las arquitecturas por sus flujos de instrucciones y datos. Sus cuatro categorías son SISD, SIMD, MISD y MIMD.</p>
+      </section>
+
+      <section id="tema-4-sisd" class="tema tema-sub2">
+        <span class="tema-num">SISD</span>
+        <h4>Single Instruction, Single Data</h4>
+        <p>Procesa un flujo de instrucciones sobre un flujo de datos. Corresponde al modelo secuencial tradicional de un procesador que ejecuta una instrucción después de otra.</p>
+      </section>
+
+      <section id="tema-4-simd" class="tema tema-sub2">
+        <span class="tema-num">SIMD</span>
+        <h4>Single Instruction, Multiple Data</h4>
+        <p>Una instrucción se aplica simultáneamente a varios datos. Esta organización es útil cuando se repite la misma operación sobre vectores, matrices, imágenes o grandes conjuntos numéricos.</p>
+      </section>
+
+      <section id="tema-4-misd" class="tema tema-sub2">
+        <span class="tema-num">MISD</span>
+        <h4>Multiple Instruction, Single Data</h4>
+        <p>Varios flujos de instrucciones operan sobre un mismo flujo de datos. Es una arquitectura poco común; puede encontrarse como modelo teórico o en sistemas especializados con redundancia y tolerancia a fallos.</p>
+      </section>
+
+      <section id="tema-4-mimd" class="tema tema-sub2">
+        <span class="tema-num">MIMD</span>
+        <h4>Multiple Instruction, Multiple Data</h4>
+        <p>Varios procesadores ejecutan instrucciones diferentes sobre conjuntos de datos distintos. Los sistemas multinúcleo, multiprocesadores y clústeres son ejemplos de esta categoría.</p>
+      </section>
+
+      <section id="tema-4-2-2" class="tema tema-sub">
+        <span class="tema-num">4.2.2</span>
+        <h3>Arquitectura de computadoras secuenciales</h3>
+        <p>Una arquitectura secuencial ejecuta las instrucciones de un programa en un orden definido, normalmente mediante un único flujo de control. Sirve como modelo de referencia para entender las diferencias con el procesamiento paralelo.</p>
+      </section>
+
+      <section id="tema-4-secuencial" class="tema tema-sub2">
+        <span class="tema-num">4.2.2</span>
+        <h4>Funcionamiento secuencial</h4>
+        <p>El procesador obtiene una instrucción de memoria, la decodifica y la ejecuta; después continúa con la siguiente instrucción, salvo que una operación de control modifique el flujo del programa.</p>
+      </section>
+
+      <section id="tema-4-limitaciones" class="tema tema-sub2">
+        <span class="tema-num">4.2.2</span>
+        <h4>Limitaciones</h4>
+        <p>El tiempo total depende de la ejecución de cada operación en secuencia. Un solo procesador puede convertirse en cuello de botella y limitar el crecimiento del rendimiento, aunque aumentar el paralelismo también implica costos de coordinación.</p>
+      </section>
+
+      <section id="tema-4-2-3" class="tema tema-sub">
+        <span class="tema-num">4.2.3</span>
+        <h3>Organización de direcciones de memoria</h3>
+        <p>La organización de memoria define cómo los procesadores acceden a los datos y cómo se identifican sus direcciones. En los sistemas paralelos, las alternativas principales son compartir un espacio de direcciones o mantener memorias locales separadas.</p>
+      </section>
+
+      <section id="tema-4-memoria-compartida" class="tema tema-sub2">
+        <span class="tema-num">4.2.3</span>
+        <h4>Memoria compartida</h4>
+        <p>Los procesadores acceden a un espacio de direcciones común. Esto facilita compartir datos, pero requiere mecanismos de sincronización y coherencia para evitar conflictos entre accesos simultáneos.</p>
+      </section>
+
+      <section id="tema-4-memoria-distribuida" class="tema tema-sub2">
+        <span class="tema-num">4.2.3</span>
+        <h4>Memoria distribuida</h4>
+        <p>Cada procesador o nodo dispone de memoria local y su propio espacio de direcciones. Para compartir información, los nodos intercambian mensajes mediante una red de interconexión.</p>
+      </section>
+
+      <section id="tema-4-3" class="tema">
+        <span class="tema-num">4.3</span>
+        <h2>Sistemas de memoria compartida (multiprocesadores)</h2>
+        <p>En un multiprocesador, dos o más procesadores trabajan dentro de un sistema que comparte memoria principal. La comunicación puede hacerse mediante lecturas y escrituras sobre los datos comunes.</p>
+      </section>
+
+      <section id="tema-4-3-1" class="tema tema-sub">
+        <span class="tema-num">4.3.1</span>
+        <h3>Ventajas y desventajas de memoria compartida</h3>
+        <p>El espacio de direcciones común facilita la comunicación y la programación de ciertas aplicaciones. Sin embargo, puede producir contención por memoria, dificultades de coherencia y límites de escalabilidad conforme se agregan procesadores.</p>
+      </section>
+
+      <section id="tema-4-3-2" class="tema tema-sub">
+        <span class="tema-num">4.3.2</span>
+        <h3>Redes de interconexión dinámica (indirecta)</h3>
+        <p>Las redes dinámicas establecen rutas de comunicación mediante elementos de conmutación. La conexión entre procesadores y memoria puede cambiar durante la ejecución, según las solicitudes del sistema.</p>
+      </section>
+
+      <section id="tema-4-medio-compartido" class="tema tema-sub2">
+        <span class="tema-num">4.3.2</span>
+        <h4>Medio compartido</h4>
+        <p>Todos los procesadores utilizan un canal común, como un bus. El arbitraje determina quién transmite en cada momento; es una solución sencilla, aunque el canal compartido puede limitar el ancho de banda.</p>
+      </section>
+
+      <section id="tema-4-redes-conmutadas" class="tema tema-sub2">
+        <span class="tema-num">4.3.2</span>
+        <h4>Redes conmutadas</h4>
+        <p>Los conmutadores crean rutas entre los nodos y permiten varias transferencias simultáneas, según la topología. Pueden ofrecer mayor capacidad que un medio único, a costa de más complejidad y hardware.</p>
+      </section>
+
+      <section id="tema-4-4" class="tema">
+        <span class="tema-num">4.4</span>
+        <h2>Sistemas de memoria distribuida (multicomputadores)</h2>
+        <p>Un multicomputador está formado por nodos autónomos con procesador y memoria local, conectados por una red. El sistema distribuye el trabajo y coordina a los nodos mediante intercambio de mensajes.</p>
+      </section>
+
+      <section id="tema-4-4-1" class="tema tema-sub">
+        <span class="tema-num">4.4.1</span>
+        <h3>Comunicación entre procesadores</h3>
+        <p>Los procesadores se comunican enviando y recibiendo mensajes a través de la red. El diseño debe considerar el tamaño y frecuencia de los mensajes, la latencia, el ancho de banda y la sincronización entre procesos.</p>
+      </section>
+
+      <section id="tema-4-4-2" class="tema tema-sub">
+        <span class="tema-num">4.4.2</span>
+        <h3>Ventajas y desventajas de memoria distribuida</h3>
+        <p>La memoria local de cada nodo permite crecer agregando equipos y puede ofrecer gran capacidad total. Como desventajas, los datos no se comparten directamente, la comunicación tiene latencia y el programa debe administrar explícitamente la distribución de datos y tareas.</p>
+      </section>
+
+      <section id="tema-4-4-3" class="tema tema-sub">
+        <span class="tema-num">4.4.3</span>
+        <h3>Redes de interconexión estáticas</h3>
+        <p>En una red estática, cada nodo mantiene enlaces físicos definidos con otros nodos. La topología establece las rutas posibles y afecta la latencia, el costo y la tolerancia a fallos.</p>
+      </section>
+
+      <section id="tema-4-malla" class="tema tema-sub2">
+        <span class="tema-num">4.4.3</span>
+        <h4>Topología en malla</h4>
+        <p>Los nodos se conectan con sus vecinos en filas y columnas. La malla facilita ampliar la red por dimensiones y ofrece varias rutas, aunque la distancia entre nodos extremos puede aumentar el número de saltos.</p>
+      </section>
+
+      <section id="tema-4-anillo" class="tema tema-sub2">
+        <span class="tema-num">4.4.3</span>
+        <h4>Topología en anillo</h4>
+        <p>Cada nodo se conecta con dos vecinos y forma un circuito cerrado. La comunicación recorre el anillo hasta alcanzar su destino; algunas implementaciones usan anillos dobles para ofrecer rutas alternativas.</p>
+      </section>
+
+      <section id="tema-4-hipercubo" class="tema tema-sub2">
+        <span class="tema-num">4.4.3</span>
+        <h4>Topología hipercubo</h4>
+        <p>Los nodos se representan como vértices de un cubo de varias dimensiones y se conectan cuando sus direcciones difieren en un bit. Esta estructura ofrece rutas cortas y crece de forma regular al aumentar sus dimensiones.</p>
+      </section>
+
+      <section id="tema-4-5" class="tema">
+        <span class="tema-num">4.5</span>
+        <h2>Casos para estudio</h2>
+        <p>El análisis de casos permite comparar arquitecturas según la aplicación, la organización de memoria, la comunicación y el rendimiento esperado. La mejor opción depende del problema y de los recursos disponibles.</p>
+      </section>
+
+      <section id="tema-4-5-1" class="tema tema-sub">
+        <span class="tema-num">4.5.1</span>
+        <h3>Multiprocesadores</h3>
+        <p>Un servidor con varios procesadores o núcleos puede atender solicitudes simultáneas y compartir datos en memoria. Para evaluarlo se consideran la escalabilidad, la coherencia de caché y la contención por recursos compartidos.</p>
+      </section>
+
+      <section id="tema-4-5-2" class="tema tema-sub">
+        <span class="tema-num">4.5.2</span>
+        <h3>Multicomputadores</h3>
+        <p>Un clúster combina computadoras independientes conectadas por una red para ejecutar una carga distribuida. Su estudio considera la partición del problema, la comunicación, el balanceo de carga y la recuperación ante fallos.</p>
+      </section>
+
+      <section id="tema-4-5-3" class="tema tema-sub">
+        <span class="tema-num">4.5.3</span>
+        <h3>Redes de interconexión</h3>
+        <p>La red influye en cuánto tardan los procesadores en intercambiar datos y en cuántas transferencias pueden realizar al mismo tiempo. Para comparar topologías se analizan latencia, ancho de banda, número de enlaces, costo y tolerancia a fallos.</p>
+      </section>
+
+      <div class="unit-footer">
+        <a href="index.html" class="back-link">← Volver al menú principal</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

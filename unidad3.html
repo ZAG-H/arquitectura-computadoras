@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 3 · Arquitectura de Computadoras</title>
+  <link rel="stylesheet" href="unidades.css">
+</head>
+<body>
+
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menú lateral">☰</button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="badge">Unidad 3</span>
+      <h2>Periféricos y ambientes de servicio</h2>
+      <p>Índice de temas</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#tema-3-0"><span class="num">03</span> Periféricos y ambientes de servicio</a>
+      <a href="#tema-3-1"><span class="num">3.1</span> Chipset (conjunto de chips)</a>
+      <a href="#tema-3-1-1"><span class="num">3.1.1</span> Unidad Central de Procesamiento (CPU)</a>
+      <a href="#tema-3-1-2"><span class="num">3.1.2</span> Controlador del bus</a>
+      <a href="#tema-3-1-3"><span class="num">3.1.3</span> Puertos de Entrada/Salida (E/S)</a>
+      <a href="#tema-3-1-4"><span class="num">3.1.4</span> Controlador de interrupciones</a>
+      <a href="#tema-3-1-5"><span class="num">3.1.5</span> Controlador de acceso directo a memoria (DMA)</a>
+      <a href="#tema-3-1-6"><span class="num">3.1.6</span> Circuitos de temporizador</a>
+      <a href="#tema-3-1-7"><span class="num">3.1.7</span> Circuitos de control</a>
+      <a href="#tema-3-1-8"><span class="num">3.1.8</span> Controladores de video</a>
+      <a href="#tema-3-2"><span class="num">3.2</span> Aplicaciones</a>
+      <a href="#tema-3-2-1"><span class="num">3.2.1</span> Entrada / Salida</a>
+      <a href="#tema-3-2-2"><span class="num">3.2.2</span> Almacenamiento</a>
+      <a href="#tema-3-2-3"><span class="num">3.2.3</span> Fuentes de alimentación</a>
+      <a href="#tema-3-3"><span class="num">3.3</span> Ambientes de servicio</a>
+      <a href="#tema-3-3-1"><span class="num">3.3.1</span> Negocios</a>
+      <a href="#tema-3-3-2"><span class="num">3.3.2</span> Industria</a>
+      <a href="#tema-3-3-3"><span class="num">3.3.3</span> Comercio electrónico</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="back-home">← Volver al menú principal</a>
+    </div>
+  </aside>
+
+  <div class="app">
+    <main class="main-content">
+      <header class="unit-hero">
+        <span class="badge">Unidad 3</span>
+        <h1>Periféricos y ambientes de servicio</h1>
+        <p>Componentes de soporte, aplicaciones y entornos de operación de un sistema de cómputo.</p>
+      </header>
+
+      <section id="tema-3-0" class="tema">
+        <span class="tema-num">03</span>
+        <h2>Periféricos y ambientes de servicio</h2>
+        <p>Una computadora integra procesador, memoria y dispositivos periféricos para recibir, procesar, almacenar y comunicar información. En esta unidad se estudian los circuitos que coordinan esos componentes y los ambientes donde se utilizan.</p>
+      </section>
+
+      <section id="tema-3-1" class="tema">
+        <span class="tema-num">3.1</span>
+        <h2>Chipset (conjunto de chips)</h2>
+        <p>El chipset reúne controladores y circuitos de la tarjeta madre que permiten la comunicación entre el procesador, la memoria y los periféricos. Sus funciones dependen de la arquitectura; en equipos actuales muchas de ellas se integran directamente en el procesador.</p>
+      </section>
+
+      <section id="tema-3-1-1" class="tema tema-sub">
+        <span class="tema-num">3.1.1</span>
+        <h3>Unidad Central de Procesamiento (CPU)</h3>
+        <p>La CPU interpreta y ejecuta instrucciones, realiza operaciones y coordina el trabajo del sistema. Se comunica con la memoria y los dispositivos mediante interfaces y buses, y su rendimiento depende de factores como la frecuencia, los núcleos y la arquitectura.</p>
+      </section>
+
+      <section id="tema-3-1-2" class="tema tema-sub">
+        <span class="tema-num">3.1.2</span>
+        <h3>Controlador del bus</h3>
+        <p>El controlador del bus organiza el intercambio de información entre los componentes. Coordina señales de datos, direcciones y control, y ayuda a resolver qué dispositivo puede utilizar el bus en cada momento.</p>
+      </section>
+
+      <section id="tema-3-1-3" class="tema tema-sub">
+        <span class="tema-num">3.1.3</span>
+        <h3>Puertos de Entrada/Salida (E/S)</h3>
+        <p>Los puertos de E/S permiten conectar periféricos y transferir información entre ellos y la computadora. Pueden ser internos o externos e incluyen interfaces como USB, audio, red y conexiones de video.</p>
+      </section>
+
+      <section id="tema-3-1-4" class="tema tema-sub">
+        <span class="tema-num">3.1.4</span>
+        <h3>Controlador de interrupciones</h3>
+        <p>Este controlador recibe solicitudes de atención de los dispositivos, las prioriza y notifica al procesador. Así, la CPU puede responder a eventos importantes sin revisar continuamente el estado de cada periférico.</p>
+      </section>
+
+      <section id="tema-3-1-5" class="tema tema-sub">
+        <span class="tema-num">3.1.5</span>
+        <h3>Controlador de acceso directo a memoria (DMA)</h3>
+        <p>El DMA transfiere bloques de datos entre un periférico y la memoria principal con poca intervención de la CPU. Al terminar, puede generar una interrupción para informar que la transferencia concluyó.</p>
+      </section>
+
+      <section id="tema-3-1-6" class="tema tema-sub">
+        <span class="tema-num">3.1.6</span>
+        <h3>Circuitos de temporizador</h3>
+        <p>Los temporizadores generan intervalos y señales de tiempo que sirven para medir duraciones, programar eventos y mantener tareas periódicas. El sistema operativo los utiliza, por ejemplo, para administrar procesos y actualizar el reloj del sistema.</p>
+      </section>
+
+      <section id="tema-3-1-7" class="tema tema-sub">
+        <span class="tema-num">3.1.7</span>
+        <h3>Circuitos de control</h3>
+        <p>Los circuitos de control coordinan las señales necesarias para iniciar, ordenar y sincronizar operaciones entre las partes de la computadora. Su función es que las transferencias y acciones ocurran en la secuencia adecuada.</p>
+      </section>
+
+      <section id="tema-3-1-8" class="tema tema-sub">
+        <span class="tema-num">3.1.8</span>
+        <h3>Controladores de video</h3>
+        <p>El controlador de video procesa o coordina la información que se envía a una pantalla. Puede estar integrado en la CPU o formar parte de una tarjeta gráfica dedicada; administra tareas como generar imágenes y manejar resoluciones y pantallas conectadas.</p>
+      </section>
+
+      <section id="tema-3-2" class="tema">
+        <span class="tema-num">3.2</span>
+        <h2>Aplicaciones</h2>
+        <p>Los componentes de E/S, almacenamiento y alimentación permiten adaptar una computadora a distintas necesidades. La selección depende del tipo de información que se procesa, la velocidad requerida y las condiciones de uso.</p>
+      </section>
+
+      <section id="tema-3-2-1" class="tema tema-sub">
+        <span class="tema-num">3.2.1</span>
+        <h3>Entrada / Salida</h3>
+        <p>Los dispositivos de entrada capturan datos, como un teclado, un lector o un sensor. Los dispositivos de salida presentan resultados, como una pantalla, una impresora o un actuador. Algunos periféricos, como una interfaz de red, cumplen ambas funciones.</p>
+      </section>
+
+      <section id="tema-3-2-2" class="tema tema-sub">
+        <span class="tema-num">3.2.2</span>
+        <h3>Almacenamiento</h3>
+        <p>Las unidades de almacenamiento conservan programas y datos. Los discos duros ofrecen capacidad a bajo costo, mientras que las unidades de estado sólido proporcionan acceso rápido mediante memoria flash. La elección considera capacidad, velocidad, durabilidad y costo.</p>
+      </section>
+
+      <section id="tema-3-2-3" class="tema tema-sub">
+        <span class="tema-num">3.2.3</span>
+        <h3>Fuentes de alimentación</h3>
+        <p>La fuente convierte la energía eléctrica de entrada en voltajes regulados que requieren los componentes. Debe ofrecer potencia suficiente, conexiones compatibles y protecciones ante variaciones eléctricas para operar de manera estable.</p>
+      </section>
+
+      <section id="tema-3-3" class="tema">
+        <span class="tema-num">3.3</span>
+        <h2>Ambientes de servicio</h2>
+        <p>El entorno de operación determina requisitos de disponibilidad, seguridad, rendimiento y mantenimiento. El hardware y la infraestructura se eligen de acuerdo con las tareas que debe realizar cada sistema.</p>
+      </section>
+
+      <section id="tema-3-3-1" class="tema tema-sub">
+        <span class="tema-num">3.3.1</span>
+        <h3>Negocios</h3>
+        <p>En los negocios, los equipos y servidores apoyan la administración, comunicación y análisis de información. Su diseño suele priorizar la continuidad del servicio, las copias de seguridad, el control de acceso y la protección de datos.</p>
+      </section>
+
+      <section id="tema-3-3-2" class="tema tema-sub">
+        <span class="tema-num">3.3.2</span>
+        <h3>Industria</h3>
+        <p>En la industria, las computadoras pueden supervisar procesos, recibir datos de sensores y controlar maquinaria. Se requieren sistemas confiables, capaces de operar con tiempos predecibles y, en ocasiones, resistir polvo, vibración o temperaturas exigentes.</p>
+      </section>
+
+      <section id="tema-3-3-3" class="tema tema-sub">
+        <span class="tema-num">3.3.3</span>
+        <h3>Comercio electrónico</h3>
+        <p>El comercio electrónico utiliza plataformas conectadas para mostrar productos, procesar pedidos y gestionar pagos. Sus sistemas deben atender variaciones de demanda y proteger la información y las transacciones de los usuarios.</p>
+      </section>
+
+      <div class="unit-footer">
+        <a href="index.html" class="back-link">← Volver al menú principal</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
