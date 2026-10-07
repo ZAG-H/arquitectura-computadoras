@@ -3,159 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temario · Arquitectura de Computadoras</title>
+  <title>Arquitectura de Computadoras · ITS</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Botón hamburguesa -->
   <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menú lateral">☰</button>
-
-  <!-- Overlay para móvil -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <!-- ===== MENÚ LATERAL IZQUIERDO (índice completo) ===== -->
+  <!-- ===== SIDEBAR (sin cambios) ===== -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-      <span class="badge">Temario</span>
+      <div class="sidebar-logo-wrap">
+        <img src="imagenes/institucion/logo-tecnm.png" alt="TecNM" class="sidebar-logo">
+      </div>
       <h2>Arquitectura de Computadoras</h2>
-      <p>Ingeniería Sistemas</p>
+      <p>Instituto Tecnológico de Saltillo</p>
     </div>
 
     <nav class="sidebar-nav">
-
-      <div class="nav-section">Unidad 1</div>
-
-      <a href="unidad1.html#tema-1-0">
-        <span class="num">01</span> Arquitecturas de cómputo
-      </a>
-      <a href="unidad1.html#tema-1-1">
-        <span class="num">1.1</span> Modelos de arquitecturas
-      </a>
-      <a href="unidad1.html#tema-1-1-1">
-        <span class="num">1.1.1</span> Clásicas
-      </a>
-      <a href="unidad1.html#tema-1-1-2">
-        <span class="num">1.1.2</span> Segmentadas
-      </a>
-      <a href="unidad1.html#tema-1-1-3">
-        <span class="num">1.1.3</span> De multiprocesamiento
-      </a>
-      <a href="unidad1.html#tema-1-2">
-        <span class="num">1.2</span> Análisis de los componentes
-      </a>
-      <a href="unidad1.html#tema-1-2-1">
-        <span class="num">1.2.1</span> Arquitecturas
-      </a>
-      <a href="unidad1.html#tema-1-2-1-1">
-        <span class="num">1.2.1.1</span> Unidad Central de Procesamiento
-      </a>
-      <a href="unidad1.html#tema-1-2-1-2">
-        <span class="num">1.2.1.2</span> Unidad Aritmética Lógica
-      </a>
-      <a href="unidad1.html#tema-1-2-1-3">
-        <span class="num">1.2.1.3</span> Registros
-      </a>
-      <a href="unidad1.html#tema-1-2-1-4">
-        <span class="num">1.2.1.4</span> Buses
-      </a>
-      <a href="unidad1.html#tema-1-2-2">
-        <span class="num">1.2.2</span> Memoria
-      </a>
-      <a href="unidad1.html#tema-1-2-2-1">
-        <span class="num">1.2.2.1</span> Conceptos básicos
-      </a>
-      <a href="unidad1.html#tema-1-2-2-2">
-        <span class="num">1.2.2.2</span> Memoria principal
-      </a>
-      <a href="unidad1.html#tema-1-2-2-3">
-        <span class="num">1.2.2.3</span> Memoria caché
-      </a>
-      <a href="unidad1.html#tema-1-2-3">
-        <span class="num">1.2.3</span> Manejo de entrada/salida
-      </a>
-      <a href="unidad1.html#tema-1-2-3-1">
-        <span class="num">1.2.3.1</span> Módulos E/S
-      </a>
-      <a href="unidad1.html#tema-1-2-3-2">
-        <span class="num">1.2.3.2</span> E/S programada
-      </a>
-      <a href="unidad1.html#tema-1-2-3-3">
-        <span class="num">1.2.3.3</span> E/S por interrupciones
-      </a>
-      <a href="unidad1.html#tema-1-2-3-4">
-        <span class="num">1.2.3.4</span> Acceso directo a memoria
-      </a>
-      <a href="unidad1.html#tema-1-2-3-5">
-        <span class="num">1.2.3.5</span> Canales y procesadores E/S
-      </a>
-      <a href="unidad1.html#tema-1-2-4">
-        <span class="num">1.2.4</span> Buses
-      </a>
-      <a href="unidad1.html#tema-1-2-4-1">
-        <span class="num">1.2.4.1</span> Tipos de buses
-      </a>
-      <a href="unidad1.html#tema-1-2-4-2">
-        <span class="num">1.2.4.2</span> Estructura de los buses
-      </a>
-      <a href="unidad1.html#tema-1-2-4-3">
-        <span class="num">1.2.4.3</span> Jerarquías de buses
-      </a>
-      <a href="unidad1.html#tema-1-2-5">
-        <span class="num">1.2.5</span> Interrupciones
+      <a href="index.html" class="nav-item" data-nav="inicio">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </span>
+        <span class="nav-text">Inicio</span>
       </a>
 
-      <div class="nav-section">Unidad 2</div>
+      <div class="nav-section">Unidades</div>
 
-      <a href="unidad2.html#tema-2-0">
-        <span class="num">02</span> Organización del procesador
-      </a>
-      <a href="unidad2.html#tema-2-1">
-        <span class="num">2.1</span> Organización del procesador
-      </a>
-      <a href="unidad2.html#tema-2-2">
-        <span class="num">2.2</span> Estructura de registros
-      </a>
-      <a href="unidad2.html#tema-2-2-1">
-        <span class="num">2.2.1</span> Registros visibles
-      </a>
-      <a href="unidad2.html#tema-2-2-2">
-        <span class="num">2.2.2</span> Registros de control y estados
-      </a>
-      <a href="unidad2.html#tema-2-2-3">
-        <span class="num">2.2.3</span> Ejemplos de registros CPU
-      </a>
-      <a href="unidad2.html#tema-2-3">
-        <span class="num">2.3</span> El ciclo de instrucción
-      </a>
-      <a href="unidad2.html#tema-2-3-1">
-        <span class="num">2.3.1</span> Fetch-Decode-Execute
-      </a>
-      <a href="unidad2.html#tema-2-3-2">
-        <span class="num">2.3.2</span> Segmentación de instrucciones
-      </a>
-      <a href="unidad2.html#tema-2-3-3">
-        <span class="num">2.3.3</span> Conjunto de instrucciones
-      </a>
-      <a href="unidad2.html#tema-2-3-4">
-        <span class="num">2.3.4</span> Modos de direccionamiento
-      </a>
-      <a href="unidad2.html#tema-2-4">
-        <span class="num">2.4</span> Casos de estudio CPU reales
+      <div class="nav-group" data-group="unidad1">
+        <div class="nav-item nav-item-header">
+          <a href="unidad1.html" class="nav-main-link">
+            <span class="nav-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </span>
+            <span class="nav-text">Unidad 1</span>
+          </a>
+          <button class="nav-chevron" data-toggle="unidad1" aria-label="Desplegar Unidad 1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="nav-submenu" data-submenu="unidad1">
+          <a href="unidad1.html#tema-1-0"><span class="sub-num">01</span> Arquitecturas de cómputo</a>
+          <a href="unidad1.html#tema-1-1"><span class="sub-num">1.1</span> Modelos de arquitecturas</a>
+          <a href="unidad1.html#tema-1-1-1"><span class="sub-num">1.1.1</span> Clásicas</a>
+          <a href="unidad1.html#tema-1-1-2"><span class="sub-num">1.1.2</span> Segmentadas</a>
+          <a href="unidad1.html#tema-1-1-3"><span class="sub-num">1.1.3</span> Multiprocesamiento</a>
+          <a href="unidad1.html#tema-1-2"><span class="sub-num">1.2</span> Análisis de componentes</a>
+          <a href="unidad1.html#tema-1-2-1"><span class="sub-num">1.2.1</span> Arquitecturas</a>
+          <a href="unidad1.html#tema-1-2-1-1"><span class="sub-num">1.2.1.1</span> Unidad Central de Procesamiento</a>
+          <a href="unidad1.html#tema-1-2-1-2"><span class="sub-num">1.2.1.2</span> Unidad Aritmética Lógica</a>
+          <a href="unidad1.html#tema-1-2-1-3"><span class="sub-num">1.2.1.3</span> Registros</a>
+          <a href="unidad1.html#tema-1-2-1-4"><span class="sub-num">1.2.1.4</span> Buses</a>
+          <a href="unidad1.html#tema-1-2-2"><span class="sub-num">1.2.2</span> Memoria</a>
+          <a href="unidad1.html#tema-1-2-2-1"><span class="sub-num">1.2.2.1</span> Conceptos básicos</a>
+          <a href="unidad1.html#tema-1-2-2-2"><span class="sub-num">1.2.2.2</span> Memoria principal</a>
+          <a href="unidad1.html#tema-1-2-2-3"><span class="sub-num">1.2.2.3</span> Memoria caché</a>
+          <a href="unidad1.html#tema-1-2-3"><span class="sub-num">1.2.3</span> Manejo E/S</a>
+          <a href="unidad1.html#tema-1-2-3-1"><span class="sub-num">1.2.3.1</span> Módulos E/S</a>
+          <a href="unidad1.html#tema-1-2-3-2"><span class="sub-num">1.2.3.2</span> E/S programada</a>
+          <a href="unidad1.html#tema-1-2-3-3"><span class="sub-num">1.2.3.3</span> E/S por interrupciones</a>
+          <a href="unidad1.html#tema-1-2-3-4"><span class="sub-num">1.2.3.4</span> Acceso directo a memoria</a>
+          <a href="unidad1.html#tema-1-2-3-5"><span class="sub-num">1.2.3.5</span> Canales y procesadores E/S</a>
+          <a href="unidad1.html#tema-1-2-4"><span class="sub-num">1.2.4</span> Buses</a>
+          <a href="unidad1.html#tema-1-2-4-1"><span class="sub-num">1.2.4.1</span> Tipos de buses</a>
+          <a href="unidad1.html#tema-1-2-4-2"><span class="sub-num">1.2.4.2</span> Estructura de buses</a>
+          <a href="unidad1.html#tema-1-2-4-3"><span class="sub-num">1.2.4.3</span> Jerarquías de buses</a>
+          <a href="unidad1.html#tema-1-2-5"><span class="sub-num">1.2.5</span> Interrupciones</a>
+        </div>
+      </div>
+
+      <div class="nav-group" data-group="unidad2">
+        <div class="nav-item nav-item-header">
+          <a href="unidad2.html" class="nav-main-link">
+            <span class="nav-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </span>
+            <span class="nav-text">Unidad 2</span>
+          </a>
+          <button class="nav-chevron" data-toggle="unidad2" aria-label="Desplegar Unidad 2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="nav-submenu" data-submenu="unidad2">
+          <a href="unidad2.html#tema-2-0"><span class="sub-num">02</span> Organización del procesador</a>
+          <a href="unidad2.html#tema-2-1"><span class="sub-num">2.1</span> Organización del procesador</a>
+          <a href="unidad2.html#tema-2-2"><span class="sub-num">2.2</span> Estructura de registros</a>
+          <a href="unidad2.html#tema-2-2-1"><span class="sub-num">2.2.1</span> Registros visibles</a>
+          <a href="unidad2.html#tema-2-2-2"><span class="sub-num">2.2.2</span> Registros de control y estados</a>
+          <a href="unidad2.html#tema-2-2-3"><span class="sub-num">2.2.3</span> Ejemplos de registros CPU</a>
+          <a href="unidad2.html#tema-2-3"><span class="sub-num">2.3</span> El ciclo de instrucción</a>
+          <a href="unidad2.html#tema-2-3-1"><span class="sub-num">2.3.1</span> Fetch-Decode-Execute</a>
+          <a href="unidad2.html#tema-2-3-2"><span class="sub-num">2.3.2</span> Segmentación de instrucciones</a>
+          <a href="unidad2.html#tema-2-3-3"><span class="sub-num">2.3.3</span> Conjunto de instrucciones</a>
+          <a href="unidad2.html#tema-2-3-4"><span class="sub-num">2.3.4</span> Modos de direccionamiento</a>
+          <a href="unidad2.html#tema-2-4"><span class="sub-num">2.4</span> Casos de estudio CPU reales</a>
+        </div>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-item nav-item-header">
+          <a href="unidad3.html" class="nav-main-link">
+            <span class="nav-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </span>
+            <span class="nav-text">Unidad 3</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-item nav-item-header">
+          <a href="unidad4.html" class="nav-main-link">
+            <span class="nav-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </span>
+            <span class="nav-text">Unidad 4</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-section">Recursos</div>
+
+      <a href="#practicas" class="nav-item" data-nav="practicas" data-tab-link="practicas">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </span>
+        <span class="nav-text">Prácticas</span>
       </a>
 
-      <div class="nav-section">Unidad 3</div>
-
-      <a href="unidad3.html">
-        <span class="num">03</span> Próximamente
+      <a href="#tareas" class="nav-item" data-nav="tareas" data-tab-link="tareas">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </span>
+        <span class="nav-text">Tareas</span>
       </a>
 
-      <div class="nav-section">Unidad 4</div>
-
-      <a href="unidad4.html">
-        <span class="num">04</span> Próximamente
+      <a href="#presentaciones" class="nav-item" data-nav="presentaciones" data-tab-link="presentaciones">
+        <span class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </span>
+        <span class="nav-text">Presentaciones</span>
       </a>
-
     </nav>
 
     <div class="sidebar-footer">
@@ -167,68 +156,383 @@
   <div class="app">
     <main class="main-content" id="mainContent">
 
-      <!-- Encabezado -->
-      <header class="page-header" id="pageHeader">
-        <span class="badge">Arquitectura de Computadoras</span>
-        <h1>Temario completo</h1>
-        <p>Selecciona una unidad para comenzar</p>
+      <!-- ===== HERO con botón Portal Oficial ===== -->
+      <header class="page-header hero" id="pageHeader">
+        <span class="badge">Proyecto Final · Ene - Jun 2026</span>
+        <h1>Arquitectura de Computadoras</h1>
+        <p class="hero-subtitle">
+          Página web del proyecto final de la materia <strong>Arquitectura de Computadoras</strong>.
+          Hecha con el objetivo de reforzar y practicar lo aprendido sobre programación web.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://www.tecnm.mx/" target="_blank" rel="noopener" class="hero-btn portal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            Portal Oficial
+          </a>
+        </div>
+
         <div class="divider"></div>
       </header>
 
-            <!-- Grid de unidades -->
-      <div id="mainMenu" class="menu-grid">
+      <!-- ===== TABS ===== -->
+      <div class="tabs-wrapper">
+        <div class="tabs" id="tabs" role="tablist">
+          <span class="tab-indicator" id="tabIndicator"></span>
 
-        <a href="unidad1.html" class="menu-card" data-tema="Unidad 1">
-          <span class="index">01</span>
-          <span class="tag">Unidad</span>
-          <h2>Unidad 1</h2>
-          <span class="hint">Arquitecturas de cómputo</span>
-          <span class="bar"></span>
-        </a>
+          <button class="tab active" data-tab="unidades" role="tab">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span>Unidades</span>
+          </button>
+          <button class="tab" data-tab="practicas" role="tab">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Prácticas</span>
+          </button>
+          <button class="tab" data-tab="tareas" role="tab">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span>Tareas</span>
+          </button>
+          <button class="tab" data-tab="presentaciones" role="tab">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span>Presentaciones</span>
+          </button>
+        </div>
+      </div>
 
-        <a href="unidad2.html" class="menu-card" data-tema="Unidad 2">
-          <span class="index">02</span>
-          <span class="tag">Unidad</span>
-          <h2>Unidad 2</h2>
-          <span class="hint">Organización del procesador</span>
-          <span class="bar"></span>
-        </a>
+      <!-- ===== PANELES ===== -->
+      <div class="tab-content-wrapper">
 
-        <a href="unidad3.html" class="menu-card" data-tema="Unidad 3">
-          <span class="index">03</span>
-          <span class="tag">Unidad</span>
-          <h2>Unidad 3</h2>
-          <span class="hint">Próximamente</span>
-          <span class="bar"></span>
-        </a>
+        <!-- Panel: Unidades -->
+        <section class="tab-panel active" data-panel="unidades">
+          <div class="menu-grid">
 
-        <a href="unidad4.html" class="menu-card" data-tema="Unidad 4">
-          <span class="index">04</span>
-          <span class="tag">Unidad</span>
-          <h2>Unidad 4</h2>
-          <span class="hint">Próximamente</span>
-          <span class="bar"></span>
-        </a>
+            <a href="unidad1.html" class="menu-card">
+              <span class="index">01</span>
+              <span class="tag">Unidad</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="5" width="14" height="14" rx="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>
+                </svg>
+              </div>
+              <h2>Unidad 1</h2>
+              <span class="hint">Arquitecturas de cómputo</span>
+              <p class="card-desc">Conceptos básicos, evolución de las computadoras y estructura fundamental del hardware.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="unidad2.html" class="menu-card">
+              <span class="index">02</span>
+              <span class="tag">Unidad</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/>
+                  <path d="M6 6v-2M10 6v-2M14 6v-2M18 6v-2M6 20v-2M10 20v-2M14 20v-2M18 20v-2"/>
+                  <line x1="6" y1="12" x2="8" y2="12"/>
+                  <line x1="10" y1="12" x2="12" y2="12"/>
+                  <line x1="14" y1="12" x2="16" y2="12"/>
+                </svg>
+              </div>
+              <h2>Unidad 2</h2>
+              <span class="hint">Organización del procesador</span>
+              <p class="card-desc">La Unidad Central de Procesamiento (CPU), conjunto de instrucciones y diseño del procesador.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="unidad3.html" class="menu-card">
+              <span class="index">03</span>
+              <span class="tag">Unidad</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="7" height="7" rx="1"/>
+                  <rect x="13" y="4" width="7" height="7" rx="1"/>
+                  <rect x="4" y="13" width="7" height="7" rx="1"/>
+                  <rect x="13" y="13" width="7" height="7" rx="1"/>
+                </svg>
+              </div>
+              <h2>Unidad 3</h2>
+              <span class="hint">Memoria y almacenamiento</span>
+              <p class="card-desc">Jerarquía de memoria, memoria caché, memoria principal y almacenamiento secundario.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="unidad4.html" class="menu-card">
+              <span class="index">04</span>
+              <span class="tag">Unidad</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="6" rx="1.5"/>
+                  <rect x="3" y="14" width="18" height="6" rx="1.5"/>
+                  <circle cx="7" cy="7" r="0.6" fill="currentColor"/>
+                  <circle cx="7" cy="17" r="0.6" fill="currentColor"/>
+                  <line x1="11" y1="7" x2="18" y2="7"/>
+                  <line x1="11" y1="17" x2="18" y2="17"/>
+                </svg>
+              </div>
+              <h2>Unidad 4</h2>
+              <span class="hint">E/S y procesadores avanzados</span>
+              <p class="card-desc">Sistemas de Entrada/Salida, buses del sistema y arquitecturas de procesadores avanzados.</p>
+              <span class="bar"></span>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- Panel: Prácticas -->
+        <section class="tab-panel" data-panel="practicas">
+          <div class="menu-grid">
+
+            <a href="pdfs/practicas/practica1.pdf" target="_blank" class="menu-card">
+              <span class="index">P1</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="12" y1="18" x2="12" y2="12"/>
+                  <line x1="9" y1="15" x2="15" y2="15"/>
+                </svg>
+              </div>
+              <h2>Práctica 1</h2>
+              <span class="hint">Introducción al hardware</span>
+              <p class="card-desc">Reporte con ejercicios y conclusiones de la primera práctica del curso.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/practicas/practica2.pdf" target="_blank" class="menu-card">
+              <span class="index">P2</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="12" y1="18" x2="12" y2="12"/>
+                  <line x1="9" y1="15" x2="15" y2="15"/>
+                </svg>
+              </div>
+              <h2>Práctica 2</h2>
+              <span class="hint">Modelos de arquitectura</span>
+              <p class="card-desc">Análisis comparativo de los modelos de arquitectura estudiados en clase.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/practicas/practica3.pdf" target="_blank" class="menu-card">
+              <span class="index">P3</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="12" y1="18" x2="12" y2="12"/>
+                  <line x1="9" y1="15" x2="15" y2="15"/>
+                </svg>
+              </div>
+              <h2>Práctica 3</h2>
+              <span class="hint">Próximamente</span>
+              <p class="card-desc">Documento pendiente de subir.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/practicas/practica4.pdf" target="_blank" class="menu-card">
+              <span class="index">P4</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="12" y1="18" x2="12" y2="12"/>
+                  <line x1="9" y1="15" x2="15" y2="15"/>
+                </svg>
+              </div>
+              <h2>Práctica 4</h2>
+              <span class="hint">Próximamente</span>
+              <p class="card-desc">Documento pendiente de subir.</p>
+              <span class="bar"></span>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- Panel: Tareas -->
+        <section class="tab-panel" data-panel="tareas">
+          <div class="menu-grid">
+
+            <a href="pdfs/tareas/tarea1.pdf" target="_blank" class="menu-card">
+              <span class="index">T1</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+              </div>
+              <h2>Tarea 1</h2>
+              <span class="hint">Próximamente</span>
+              <p class="card-desc">Documento pendiente de subir.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/tareas/tarea2.pdf" target="_blank" class="menu-card">
+              <span class="index">T2</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+              </div>
+              <h2>Tarea 2</h2>
+              <span class="hint">Próximamente</span>
+              <p class="card-desc">Documento pendiente de subir.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/tareas/tarea3.pdf" target="_blank" class="menu-card">
+              <span class="index">T3</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+              </div>
+              <h2>Tarea 3</h2>
+              <span class="hint">Próximamente</span>
+              <p class="card-desc">Documento pendiente de subir.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/tareas/tarea4.pdf" target="_blank" class="menu-card">
+              <span class="index">T4</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+              </div>
+              <h2>Tarea 4</h2>
+              <span class="hint">Próximamente</span>
+              <p class="card-desc">Documento pendiente de subir.</p>
+              <span class="bar"></span>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- Panel: Presentaciones -->
+        <section class="tab-panel" data-panel="presentaciones">
+          <div class="menu-grid">
+
+            <a href="pdfs/presentaciones/unidad1.pdf" target="_blank" class="menu-card">
+              <span class="index">U1</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h2>Unidad 1</h2>
+              <span class="hint">Arquitecturas de cómputo</span>
+              <p class="card-desc">Presentación completa de la Unidad 1 en formato PDF.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/presentaciones/unidad2.pdf" target="_blank" class="menu-card">
+              <span class="index">U2</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h2>Unidad 2</h2>
+              <span class="hint">Organización del procesador</span>
+              <p class="card-desc">Presentación completa de la Unidad 2 en formato PDF.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/presentaciones/unidad3.pdf" target="_blank" class="menu-card">
+              <span class="index">U3</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h2>Unidad 3</h2>
+              <span class="hint">Próximamente</span>
+              <p class="card-desc">Documento pendiente de subir.</p>
+              <span class="bar"></span>
+            </a>
+
+            <a href="pdfs/presentaciones/unidad4.pdf" target="_blank" class="menu-card">
+              <span class="index">U4</span>
+              <span class="tag">PDF</span>
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h2>Unidad 4</h2>
+              <span class="hint">Próximamente</span>
+              <p class="card-desc">Documento pendiente de subir.</p>
+              <span class="bar"></span>
+            </a>
+
+          </div>
+        </section>
 
       </div>
 
+      <!-- ===== RÚBRICA (siempre visible) ===== -->
+      <section class="rubrica-section" id="rubrica">
+        <div class="rubrica-header">
+          <h2>Rúbrica de Evaluación</h2>
+          <p>Criterios de calificación del proyecto final</p>
+        </div>
+
+        <div class="rubrica-grid">
+          <div class="rubrica-card">
+            <span class="rubrica-num">60%</span>
+            <h3>Proyecto Final</h3>
+            <p>Desarrollo de la Página Web</p>
+          </div>
+          <div class="rubrica-card">
+            <span class="rubrica-num">40%</span>
+            <h3>Exámenes y Prácticas</h3>
+            <p>Evaluación Continua</p>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <!-- ===== PIE DE PÁGINA ===== -->
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-brand">
           <span class="dot"></span>
-          <span>Arquitectura de Computadoras · Temario interactivo</span>
+          <span>Arquitectura de Computadoras · ITS</span>
         </div>
-
-                <div class="footer-links">
+        <div class="footer-links">
           <a href="unidad1.html">Unidad 1</a>
           <a href="unidad2.html">Unidad 2</a>
           <a href="unidad3.html">Unidad 3</a>
           <a href="unidad4.html">Unidad 4</a>
         </div>
-
         <div class="footer-copy">
           © 2026 · <span>Todos los derechos reservados</span>
         </div>
