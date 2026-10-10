@@ -34,13 +34,24 @@
   const tabsContainer = document.getElementById('tabs');
 
   function updateIndicator(activeTab) {
-    if (!indicator || !tabsContainer) return;
+  if (!indicator || !tabsContainer || !activeTab) return;
+
+  requestAnimationFrame(() => {
     const tabRect = activeTab.getBoundingClientRect();
     const containerRect = tabsContainer.getBoundingClientRect();
-    const offsetX = tabRect.left - containerRect.left - 0.35 * 16;
-    indicator.style.transform = `translateX(${offsetX}px)`;
+
+    const isMobile = window.innerWidth <= 700;
+    const padding = isMobile ? 0.4 : 0.35;
+    const paddingPx = padding * 16;
+
+    const offsetX = tabRect.left - containerRect.left - paddingPx;
+    const offsetY = tabRect.top - containerRect.top - paddingPx;
+
+    indicator.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
     indicator.style.width = `${tabRect.width}px`;
-  }
+    indicator.style.height = `${tabRect.height}px`;
+  });
+}
 
   function activateTab(tabName, scroll = false) {
     tabs.forEach(t => {
