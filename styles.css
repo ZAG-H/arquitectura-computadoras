@@ -898,13 +898,16 @@ body::after {
   }
   .menu-card h2 { font-size: 1.4rem; }
   .menu-card .card-icon {
-    width: 48px;
-    height: 48px;
-    top: 42%; /* Lo ponemos en el hueco entre el tag y el título */
+    width: 44px;
+    height: 44px;
+    top: 28%; /* Lo subimos justo debajo de la etiqueta */
     transform: translate(-50%, -50%);
+    opacity: 0.2; /* Efecto marca de agua sutil */
   }
+  
   .menu-card:hover .card-icon {
     transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.4;
   }
   .menu-card .card-desc { font-size: 0.72rem; }
   .site-footer { padding: 2rem 1rem 1.5rem; }
