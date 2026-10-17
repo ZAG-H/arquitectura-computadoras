@@ -607,7 +607,19 @@
       </div>
     </footer>
   </div>
-
+  <!-- ===== MODAL PARA VER PDFs ===== -->
+  <div id="pdfModal" class="modal-overlay">
+    <div class="modal-content pdf-content">
+      <div class="pdf-header">
+        <h2>Visor de documentos</h2>
+        <button id="btnCerrarPdf" class="btn-cerrar-modal" style="width: auto; padding: 0.5rem 1rem;">✕ Cerrar</button>
+      </div>
+      
+      <!-- Aquí se cargará el PDF dinámicamente -->
+      <iframe id="pdfIframe" src=""></iframe>
+      
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
