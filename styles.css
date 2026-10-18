@@ -678,6 +678,16 @@ body::after {
 }
 
 .hero-btn svg { flex-shrink: 0; }
+.hero-btn.portal {
+  border-color: #22d3ee;
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.08);
+}
+.hero-btn.portal:hover {
+  background: rgba(34, 211, 238, 0.16);
+  border-color: #67e8f9;
+  color: #67e8f9;
+}
 
 /* ===== RÚBRICA ===== */
 .rubrica-section {

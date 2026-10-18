@@ -245,5 +245,68 @@
       }
     });
   }
+/* =====================================================
+   BOTÓN PARA COMPARTIR E INSTALAR LA APP (PWA)
+===================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // --- Lógica para Compartir ---
+  const btnShare = document.getElementById('btnShare');
+  if (btnShare) {
+    btnShare.addEventListener('click', async () => {
+      const shareData = {
+        title: 'Arquitectura de Computadoras - ITS',
+        text: '¡Checa la página web que hice para la materia!',
+        url: window.location.href
+      };
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else {
+          await navigator.clipboard.writeText(window.location.href);
+          alert('¡Enlace copiado al portapapeles!');
+        }
+      } catch (err) {
+        console.log('Error al compartir:', err);
+      }
+    });
+  }
 
+  // --- Lógica para Instalar App (PWA) ---
+  let deferredPrompt;
+  const btnInstall = document.getElementById('btnInstall');
+
+  // El navegador avisa cuando la app es "instalable"
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Evitamos que el navegador muestre su propio banner automático
+    e.preventDefault();
+    // Guardamos el evento para dispararlo cuando el usuario haga clic
+    deferredPrompt = e;
+    // Mostramos nuestro botón personalizado
+    if (btnInstall) btnInstall.style.display = 'inline-flex';
+  });
+
+  // Cuando el usuario hace clic en nuestro botón
+  if (btnInstall) {
+    btnInstall.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        // Mostramos el cuadro de diálogo nativo de instalación
+        deferredPrompt.prompt();
+        // Esperamos a que el usuario acepte o cancele
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log(`El usuario ${outcome === 'accepted' ? 'aceptó' : 'canceló'} la instalación`);
+        // Limpiamos la variable
+        deferredPrompt = null;
+        // Ocultamos el botón
+        btnInstall.style.display = 'none';
+      }
+    });
+  }
+
+  // Si la app ya está instalada, ocultamos el botón
+  window.addEventListener('appinstalled', () => {
+    if (btnInstall) btnInstall.style.display = 'none';
+    console.log('¡App instalada con éxito!');
+  });
+});
 })();

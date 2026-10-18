@@ -74,6 +74,13 @@ body::after {
   text-decoration: none;
   flex-shrink: 0;     /* Evita que se aplaste */
   white-space: nowrap; /* Evita que el texto se rompa */
+  
+}
+.badge {
+  padding: 0.45rem 0.8rem; border: 1px solid #dad5d5; border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.02); color: hsl(0, 100%, 100%); letter-spacing: 1px;
+  font-weight: 8500;
+ 
 }
 
 .brand-logo {
@@ -214,7 +221,7 @@ body::after {
 }
 
 .sidebar-header p { color: var(--unit-muted); font-size: 0.75rem; }
-.sidebar-nav { display: flex; flex: 1; flex-direction: column; gap: 0.2rem; }
+.sidebar-nav { display: flex; flex: 1; flex-direction: column; gap: 0.2rem;padding-bottom: 1.5rem; }
 
 .sidebar-nav > a {
   display: flex; align-items: flex-start; gap: 0.65rem;
@@ -234,10 +241,29 @@ body::after {
   font-weight: 700; font-variant-numeric: tabular-nums; padding-top: 0.08rem;
 }
 
-.sidebar-footer { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--unit-line); }
-.back-home { color: var(--unit-muted); font-size: 0.78rem; text-decoration: none; }
-.back-home:hover { color: var(--unit-accent); }
+.sidebar-footer { 
+  margin-top: 2rem; 
+  padding-top: 1.5rem; 
+  padding-bottom: 1rem; /* Aire abajo para que no se pegue al borde del celular */
+  border-top: 1px solid var(--unit-line); 
+  
+  /* Aquí hacemos la magia para apilar tus nuevos botones */
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.75rem; /* Separación entre "Volver" y "Siguiente" */
+}
 
+.sidebar-footer .btn-header {
+  width: 100%;           /* Ocupa todo el ancho disponible */
+  justify-content: flex-start; /* Alinea el texto a la izquierda */
+  padding: 0.75rem 1rem; /* Un poco más de espacio interno para que se vea cómodo */
+}
+
+  .sidebar-footer .btn-header.primary {
+  width: 100%;           /* Ocupa todo el ancho disponible */
+  justify-content: flex-start; /* Alinea el texto a la izquierda */
+  padding: 0.75rem 1rem; /* Un poco más de espacio interno para que se vea cómodo */
+}
 .sidebar-toggle {
   position: fixed; top: 1rem; left: 1rem; z-index: 1200;
   display: grid; width: 42px; height: 42px; place-items: center;
@@ -264,10 +290,7 @@ body::after {
 }
 
 .unit-hero { margin-bottom: 5rem; text-align: center; animation: unit-enter 0.65s ease both; }
-.unit-hero .badge {
-  padding: 0.45rem 0.8rem; border: 1px solid #222; border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.02); color: #888; letter-spacing: 3px;
-}
+
 
 .unit-hero h1 {
   margin: 1rem 0 0.65rem; background: linear-gradient(180deg, #fff 0%, #a0a0a0 100%);
@@ -443,7 +466,9 @@ body::after {
   .tema { 
     margin-bottom: 4rem; 
   }
-
+.sidebar {
+    padding-bottom: 2rem; /* Espacio extra al final del menú en celular */
+  }s
   /* 3. Ajustar el botón flotante */
   .floating-home-btn { 
     bottom: 1.5rem; 
@@ -510,6 +535,9 @@ body::after {
   .split-layout { 
     grid-template-columns: 1fr; 
     gap: 2rem; 
+  }
+  .sidebar {
+    padding-bottom: 2rem; /* Espacio extra al final del menú en celular */
   }
 }
 /* ===== BOTÓN VOLVER AL MENÚ (RESTAURADO) ===== */
