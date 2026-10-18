@@ -14,8 +14,8 @@
   --unit-accent-soft: rgba(255, 255, 255, 0.04);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
-html, body { min-height: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; overflow-x: hidden; }
+html, body { min-height: 100%; overflow-x: hidden; }
 
 body {
   min-height: 100vh;
@@ -53,7 +53,7 @@ body::after {
    2. HEADER STICKY (CON PESTAÑAS)
 ===================================================== */
 .app-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
@@ -259,8 +259,8 @@ body::after {
    4. CONTENIDO PRINCIPAL (REVISTA EDITORIAL)
 ===================================================== */
 .main-content {
-  flex: 1; width: 100%; max-width: 1100px; margin: 0 auto;
-  padding: 4rem 2rem 5rem; transition: margin-left 0.3s ease;
+  flex: 2; width: 100%; max-width: 1440px; margin: 0 auto;
+  padding: 7rem 3rem 5rem; transition: margin-left 0.3s ease;
 }
 
 .unit-hero { margin-bottom: 5rem; text-align: center; animation: unit-enter 0.65s ease both; }
@@ -275,7 +275,7 @@ body::after {
   font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1;
 }
 
-.unit-hero p { color: #999; font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.7; }
+.unit-hero p { color: #999; font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.7; }
 
 /* Bloques de Temas */
 .tema { margin-bottom: 6rem; scroll-margin-top: 6rem; animation: unit-enter 0.45s ease both; }
@@ -287,8 +287,10 @@ body::after {
 
 /* Layout 50/50 (Texto e Imagen) */
 .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-.split-layout.reverse { direction: rtl; }
-.split-layout.reverse .text-content, .split-layout.reverse .image-content { direction: ltr; }
+
+/* Voltear el orden de forma segura */
+.split-layout.reverse .image-content { grid-column: 1; }
+.split-layout.reverse .text-content { grid-column: 2; grid-row: 1; }
 
 .text-content p { color: #b3b3b3; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; }
 .text-content p:last-child { margin-bottom: 0; }
@@ -388,35 +390,28 @@ body::after {
 
 /* Escritorio */
 @media (min-width: 1024px) {
+  /* Empujamos todo el contenedor para hacer espacio al menú */
+  .app {
+    padding-left: 290px;
+    transition: padding-left 0.35s ease;
+  }
+
+  /* El sidebar se queda fijo a la izquierda */
   .sidebar { transform: translateX(0); }
+  
+  /* Ajustamos el botón hamburguesa */
   .sidebar-toggle { left: 306px; }
   
-  /* Más espacio porque el menú lateral está abierto */
-  .app-header { padding-left: calc(290px + 4rem); }
-  
-  .main-content { margin-left: 290px; }
   .sidebar-overlay { display: none; }
+
+  /* Cuando ocultamos el menú, la app vuelve a ocupar toda la pantalla */
+  body.sidebar-hidden .app {
+    padding-left: 0;
+  }
   
-  /* Cuando ocultas el menú, dejamos espacio para el botón (☰) */
   body.sidebar-hidden .sidebar { transform: translateX(-100%); }
-  body.sidebar-hidden .sidebar-toggle { left: 1rem; }
-  body.sidebar-hidden .main-content { margin-left: 0; }
+  body.sidebar-hidden .sidebar-toggle { left: 2rem; }
   body.sidebar-hidden .app-header { padding-left: 5rem; }
-}
-
-/* Tablets */
-@media (max-width: 1100px) {
-  .header-tab span { display: none; }
-  .header-tab { padding: 0.6rem; }
-  .header-tab svg { width: 16px; height: 16px; }
-}
-
-@media (max-width: 850px) {
-  .split-layout { grid-template-columns: 1fr; gap: 2rem; }
-  .split-layout.reverse { direction: ltr; }
-  .section-title { font-size: 1.6rem; border-bottom-width: 3px; }
-  .text-content p { font-size: 1rem; }
-  .unit-hero h1 { font-size: 2rem; }
 }
 
 /* Móviles */
