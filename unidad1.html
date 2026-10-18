@@ -10,28 +10,27 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="Arquitectura">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="unidades.css?v=unidad1-revista">
+  <link rel="stylesheet" href="unidades.css?v=unidad1-editorial">
 </head>
 <body class="unidad1-page">
 
   <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menú lateral">☰</button>
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <!-- ===== SIDEBAR ===== -->
+  <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <span class="badge">Unidad 1</span>
       <h2>Arquitecturas de cómputo</h2>
       <p>Índice de temas</p>
     </div>
-
     <nav class="sidebar-nav">
       <a href="#tema-1-0"><span class="num">01</span> Arquitecturas de cómputo</a>
       <a href="#tema-1-1"><span class="num">1.1</span> Modelos de arquitecturas</a>
       <a href="#tema-1-1-1"><span class="num">1.1.1</span> Clásicas</a>
       <a href="#tema-1-1-2"><span class="num">1.1.2</span> Segmentadas</a>
-      <a href="#tema-1-1-3"><span class="num">1.1.3</span> De multiprocesamiento</a>
-      <a href="#tema-1-2"><span class="num">1.2</span> Análisis de los componentes</a>
+      <a href="#tema-1-1-3"><span class="num">1.1.3</span> Multiprocesamiento</a>
+      <a href="#tema-1-2"><span class="num">1.2</span> Análisis de componentes</a>
       <a href="#tema-1-2-1"><span class="num">1.2.1</span> Arquitecturas</a>
       <a href="#tema-1-2-1-1"><span class="num">1.2.1.1</span> Unidad Central de Procesamiento</a>
       <a href="#tema-1-2-1-2"><span class="num">1.2.1.2</span> Unidad Aritmética Lógica</a>
@@ -41,7 +40,7 @@
       <a href="#tema-1-2-2-1"><span class="num">1.2.2.1</span> Conceptos básicos</a>
       <a href="#tema-1-2-2-2"><span class="num">1.2.2.2</span> Memoria principal</a>
       <a href="#tema-1-2-2-3"><span class="num">1.2.2.3</span> Memoria caché</a>
-      <a href="#tema-1-2-3"><span class="num">1.2.3</span> Manejo de entrada/salida</a>
+      <a href="#tema-1-2-3"><span class="num">1.2.3</span> Manejo E/S</a>
       <a href="#tema-1-2-3-1"><span class="num">1.2.3.1</span> Módulos E/S</a>
       <a href="#tema-1-2-3-2"><span class="num">1.2.3.2</span> E/S programada</a>
       <a href="#tema-1-2-3-3"><span class="num">1.2.3.3</span> E/S por interrupciones</a>
@@ -49,599 +48,494 @@
       <a href="#tema-1-2-3-5"><span class="num">1.2.3.5</span> Canales y procesadores E/S</a>
       <a href="#tema-1-2-4"><span class="num">1.2.4</span> Buses</a>
       <a href="#tema-1-2-4-1"><span class="num">1.2.4.1</span> Tipos de buses</a>
-      <a href="#tema-1-2-4-2"><span class="num">1.2.4.2</span> Estructura de los buses</a>
+      <a href="#tema-1-2-4-2"><span class="num">1.2.4.2</span> Estructura de buses</a>
       <a href="#tema-1-2-4-3"><span class="num">1.2.4.3</span> Jerarquías de buses</a>
       <a href="#tema-1-2-5"><span class="num">1.2.5</span> Interrupciones</a>
+      <a href="#presentacion"><span class="num">📄</span> Presentación</a>
     </nav>
-
     <div class="sidebar-footer">
       <a href="index.html" class="back-home">← Volver al menú principal</a>
     </div>
   </aside>
 
-  <!-- ===== CONTENIDO ===== -->
+   <!-- CONTENIDO -->
   <div class="app">
-    <main class="main-content">
 
-      <header class="unit-hero">
-        <span class="badge">Unidad 1</span>
-        <h1>Arquitecturas de cómputo</h1>
-        <p>Un recorrido por los modelos clásicos, segmentados y de multiprocesamiento, y por los componentes que hacen posible el procesamiento moderno.</p>
-      </header>
+    <!-- HEADER (Movido aquí, fuera del main) -->
+    <header class="app-header">
+      <a href="index.html" class="header-brand">
+        <span class="brand-logo">ZK</span>
+        <span class="brand-text">Unidad 1</span>
+      </a>
 
-      <!-- ========== TEMA 01 · Layout C ========== -->
-      <article id="tema-1-0" class="tema tema-layout-c">
-        <header class="tema-header">
-          <span class="tema-num">01</span>
-          <h2>Arquitecturas de cómputo</h2>
-        </header>
+      <div class="header-tabs">
+        <a href="index.html#unidades" class="header-tab active">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <span>Unidades</span>
+        </a>
+        <a href="index.html#practicas" class="header-tab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Prácticas</span>
+        </a>
+        <a href="index.html#tareas" class="header-tab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span>Tareas</span>
+        </a>
+        <a href="index.html#presentaciones" class="header-tab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Presentaciones</span>
+        </a>
+      </div>
 
-        <figure class="tema-hero">
-          <img src="imagenes/unidades/unidad1/1_0_01.png" alt="Procesadores trabajando en paralelo">
-          <figcaption>Arquitecturas modernas: procesamiento en paralelo dentro de un mismo sistema.</figcaption>
-        </figure>
+      <div class="header-actions">
+        <a href="index.html" class="btn-header">Inicio</a>
+        <a href="unidad2.html" class="btn-header primary">Siguiente →</a>
+      </div>
+    </header>
 
-        <div class="tema-body cols-2">
-          <p>La arquitectura de una computadora define cómo se organizan y coordinan sus componentes para ejecutar instrucciones. De ella dependen la capacidad de procesamiento, la velocidad y la eficiencia del sistema.</p>
-          <p>En esta unidad se estudian los modelos clásicos, las arquitecturas segmentadas y los sistemas de multiprocesamiento, además de los componentes fundamentales que participan en el procesamiento.</p>
-          <p>Entender la arquitectura es entender la computadora: cómo piensa, cómo recuerda y cómo se comunica con el mundo exterior.</p>
-        </div>
-      </article>
-
-      <!-- ========== TEMA 1.1 · Layout C ========== -->
-      <article id="tema-1-1" class="tema tema-layout-c">
-        <header class="tema-header">
-          <span class="tema-num">1.1</span>
-          <h2>Modelos de arquitecturas</h2>
-        </header>
-
-        <figure class="tema-hero">
-          <img src="imagenes/unidades/unidad1/1_1_01.png" alt="Comparación de arquitecturas">
-          <figcaption>Comparación entre arquitecturas secuenciales y paralelas.</figcaption>
-        </figure>
-
-        <div class="tema-body cols-2">
-          <p>Los modelos de arquitectura describen cómo se organizan los componentes y cómo se ejecutan las instrucciones. La arquitectura secuencial clásica procesa una instrucción a la vez; el pipeline divide su ejecución en etapas; y el multiprocesamiento permite que varios procesadores trabajen simultáneamente.</p>
-          <p>La elección del modelo influye en el rendimiento, el costo y la complejidad del sistema. No existe un modelo "mejor" universal: cada uno responde a un balance distinto entre velocidad, consumo y escalabilidad.</p>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_1_02.png" alt="Componentes de una arquitectura">
-          <figcaption>Componentes conectados en una arquitectura típica.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.1.1 · Layout A ========== -->
-      <article id="tema-1-1-1" class="tema tema-sub tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.1.1</span>
-          <h3>Clásicas</h3>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>Las arquitecturas clásicas ejecutan las instrucciones de forma secuencial mediante el ciclo de buscar, decodificar y ejecutar. Un modelo representativo es la <strong>arquitectura de Von Neumann</strong>, propuesta en 1945, que utiliza una memoria compartida para datos e instrucciones.</p>
-            <p>Sus componentes principales son la CPU —formada por la unidad de control y la ALU—, la memoria principal, la unidad de entrada/salida y el bus del sistema.</p>
+      <!-- ========== TEMA 01 ========== -->
+      <article id="tema-1-0" class="tema">
+        <h2 class="section-title">01 Arquitecturas de cómputo</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>La arquitectura de una computadora es el diseño conceptual y la estructura operacional fundamental de un sistema de cómputo. Define cómo se organizan y coordinan sus componentes (hardware y software) para ejecutar instrucciones y procesar datos. De ella dependen directamente la capacidad de procesamiento, la velocidad, el consumo energético y la eficiencia del sistema.</p>
+            <p>En esta unidad se estudian los modelos clásicos (como el de Von Neumann), las arquitecturas segmentadas (pipeline) y los sistemas de multiprocesamiento. Además, se analizan los componentes esenciales que participan en el procesamiento: la CPU, la memoria y los buses de comunicación.</p>
+            <p>Entender la arquitectura es entender el "cerebro" de la computadora: cómo piensa, cómo recuerda y cómo se comunica con el mundo exterior a través de los periféricos.</p>
           </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_1_1_01.png" alt="Arquitectura de Von Neumann">
-            <figcaption>Diagrama de la arquitectura clásica de Von Neumann.</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <!-- ========== TEMA 1.1.2 · Layout B ========== -->
-      <article id="tema-1-1-2" class="tema tema-sub tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.1.2</span>
-          <h3>Segmentadas</h3>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_1_2_01.png" alt="Pipeline de instrucciones">
-            <figcaption>Etapas de instrucciones ejecutándose en pipeline.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>El pipeline divide la ejecución de instrucciones en etapas independientes que pueden operar en paralelo. Las etapas típicas son búsqueda (<em>fetch</em>), decodificación (<em>decode</em>), ejecución (<em>execute</em>) y escritura del resultado (<em>write-back</em>); cada una puede trabajar sobre una instrucción distinta.</p>
-            <p>La segmentación aumenta la cantidad de instrucciones completadas por unidad de tiempo (<em>throughput</em>), aunque puede producir riesgos de datos, control o recursos que deben administrarse.</p>
-          </div>
-        </div>
-
-        <blockquote class="tema-quote">
-          "El pipeline no ejecuta más rápido cada instrucción: ejecuta más instrucciones a la vez."
-        </blockquote>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_1_2_02.png" alt="Procesador segmentado">
-          <figcaption>Procesador usado en una arquitectura segmentada.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.1.3 · Layout A ========== -->
-      <article id="tema-1-1-3" class="tema tema-sub tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.1.3</span>
-          <h3>De multiprocesamiento</h3>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>En una arquitectura de multiprocesamiento, varios procesadores trabajan de manera simultánea y comparten recursos. Esto permite aumentar el rendimiento, ejecutar tareas en paralelo y mejorar la tolerancia a fallos.</p>
-            <p>En los sistemas <strong>simétricos (SMP)</strong>, los procesadores comparten la memoria y el sistema operativo en condiciones equivalentes. En los <strong>asimétricos (AMP)</strong>, un procesador maestro asigna funciones a los demás.</p>
-            <p>La comunicación puede realizarse mediante buses compartidos o redes de interconexión, y cada arquitectura impone sus propias restricciones de coherencia de caché y sincronización.</p>
-          </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_1_3_01.png" alt="Sistema multiprocesador">
-            <figcaption>Diagrama de un sistema multiprocesador simétrico y asimétrico.</figcaption>
-          </figure>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_1_3_02.png" alt="Servidores multiprocesador">
-          <figcaption>Servidores con capacidad de procesamiento paralelo.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2 · Layout C ========== -->
-      <article id="tema-1-2" class="tema tema-layout-c">
-        <header class="tema-header">
-          <span class="tema-num">1.2</span>
-          <h2>Análisis de los componentes</h2>
-        </header>
-
-        <div class="tema-body cols-2">
-          <p>Los componentes de una computadora colaboran para procesar instrucciones y comunicar el sistema con el exterior. La <strong>CPU</strong> ejecuta y coordina las operaciones; la <strong>memoria</strong> conserva datos e instrucciones; los <strong>buses</strong> transportan información; y los <strong>módulos de entrada/salida</strong> gestionan los periféricos.</p>
-          <p>Analizar cada componente por separado ayuda a entender cómo interactúan y por qué ciertas decisiones de diseño impactan directamente en el rendimiento del sistema.</p>
-        </div>
-      </article>
-
-      <!-- ========== TEMA 1.2.1 · Layout B ========== -->
-      <article id="tema-1-2-1" class="tema tema-sub tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.1</span>
-          <h3>Arquitecturas</h3>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_1_01.png" alt="Placa de circuito">
-            <figcaption>Placa de circuito con componentes de una computadora.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>Una arquitectura integra los componentes de procesamiento, almacenamiento y comunicación en un sistema coordinado. La CPU ejecuta instrucciones, la memoria mantiene los datos necesarios y los buses permiten el intercambio entre módulos y dispositivos de entrada/salida.</p>
-            <p>Existen arquitecturas orientadas a servidores, a dispositivos móviles y a sistemas embebidos, cada una optimizando distintos aspectos: potencia, consumo, costo o tamaño.</p>
-          </div>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_1_02.png" alt="Gabinete de computadora">
-          <figcaption>Gabinete con sus componentes principales.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.1.1 · Layout A ========== -->
-      <article id="tema-1-2-1-1" class="tema tema-sub2 tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.1.1</span>
-          <h4>Unidad Central de Procesamiento</h4>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>La CPU es el componente central que interpreta y ejecuta las instrucciones, procesa datos y coordina el funcionamiento del sistema. La <strong>unidad de control</strong> decodifica las instrucciones y genera señales de control; la <strong>ALU</strong> efectúa las operaciones aritméticas y lógicas; y los <strong>registros</strong> guardan temporalmente datos e instrucciones de uso inmediato.</p>
-            <p>La frecuencia de reloj, el número de núcleos y el tamaño de la caché son algunos de los factores que determinan su rendimiento.</p>
-          </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_1_1_01.png" alt="Componentes internos de la CPU">
-            <figcaption>Relación entre la unidad de control, la ALU y los registros.</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <!-- ========== TEMA 1.2.1.2 · Layout B ========== -->
-      <article id="tema-1-2-1-2" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.1.2</span>
-          <h4>Unidad Aritmética Lógica</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_1_2_01.png" alt="Operaciones de la ALU">
-            <figcaption>Operandos de entrada y operaciones dentro de la ALU.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>La ALU realiza operaciones aritméticas, como suma y resta, y operaciones lógicas, como AND, OR y NOT. Por ejemplo, en binario: <code>0101 + 0011 = 1000</code> (5 + 3 = 8).</p>
-            <p>Recibe operandos desde los registros, ejecuta la operación indicada por la unidad de control y entrega el resultado. Sus circuitos incluyen sumadores, comparadores y puertas lógicas.</p>
-          </div>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_1_2_02.png" alt="Operaciones lógicas">
-          <figcaption>Ejemplos de operaciones lógicas AND y OR.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.1.3 · Layout A ========== -->
-      <article id="tema-1-2-1-3" class="tema tema-sub2 tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.1.3</span>
-          <h4>Registros</h4>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>Los registros son unidades de almacenamiento de muy alta velocidad ubicadas dentro de la CPU. El <strong>acumulador</strong> conserva resultados de operaciones; el <strong>contador de programa (PC)</strong> mantiene la dirección de la siguiente instrucción; y los <strong>registros de propósito general</strong> almacenan temporalmente datos, direcciones u operandos.</p>
-            <p>Su capacidad es limitada, pero su rapidez reduce el acceso a la memoria principal y ayuda a acelerar el procesamiento.</p>
-          </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_1_3_01.png" alt="Registros internos de la CPU">
-            <figcaption>Registros internos y su conexión con la ALU.</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <!-- ========== TEMA 1.2.1.4 · Layout B ========== -->
-      <article id="tema-1-2-1-4" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.1.4</span>
-          <h4>Buses</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_1_4_01.png" alt="Tipos de buses">
-            <figcaption>Funciones del bus de datos, de direcciones y de control.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>Los buses son canales de comunicación que conectan la CPU, la memoria y los dispositivos de entrada/salida. El <strong>bus de datos</strong> transporta información, el de <strong>direcciones</strong> identifica posiciones de memoria y el de <strong>control</strong> coordina operaciones como lectura y escritura.</p>
-            <p>El ancho del bus determina cuántos bits pueden transferirse en un ciclo y afecta directamente el rendimiento general.</p>
-          </div>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_1_4_02.png" alt="Conexiones de buses">
-          <figcaption>Conexiones de buses entre componentes.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.2 · Layout A ========== -->
-      <article id="tema-1-2-2" class="tema tema-sub tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.2</span>
-          <h3>Memoria</h3>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>La memoria almacena los datos y las instrucciones que necesita la CPU para ejecutar programas. La memoria principal ofrece acceso rápido a la información en uso, mientras que el almacenamiento secundario conserva los datos de manera persistente.</p>
-            <p>El diseño de un sistema de memoria busca siempre un balance entre velocidad, capacidad y costo.</p>
-          </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_2_01.png" alt="Dispositivos de almacenamiento">
-            <figcaption>Dispositivos de almacenamiento conectados a una tarjeta de memoria.</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <!-- ========== TEMA 1.2.2.1 · Layout B ========== -->
-      <article id="tema-1-2-2-1" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.2.1</span>
-          <h4>Conceptos básicos del manejo de la memoria</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_2_1_01.png" alt="Jerarquía de memoria">
-            <figcaption>Jerarquía de memoria desde los registros hasta el almacenamiento secundario.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>La memoria principal (<strong>RAM</strong>) es rápida y volátil: guarda temporalmente los datos y programas en uso y pierde su contenido al apagar el equipo. El almacenamiento secundario, como un disco duro o una unidad SSD, es no volátil y conserva una mayor cantidad de información.</p>
-            <p>La <strong>jerarquía de memoria</strong> ordena los niveles según su velocidad, capacidad y costo: registros, caché, RAM y almacenamiento secundario. Cuanto más cerca está la memoria del procesador, mayor suele ser su velocidad y menor su capacidad.</p>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_0_01.png" alt="Arquitectura 1">
+            <span class="image-caption">Arquitecturas modernas: procesamiento en paralelo.</span>
+            <!-- Si tienes la 1_0_02.png, descomenta la siguiente línea -->
+            <!-- <img src="imagenes/unidades/unidad1/1_0_02.png" alt="Arquitectura 2" style="margin-top: 1rem;"> -->
           </div>
         </div>
       </article>
 
-      <!-- ========== TEMA 1.2.2.2 · Layout A ========== -->
-      <article id="tema-1-2-2-2" class="tema tema-sub2 tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.2.2</span>
-          <h4>Memoria principal</h4>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>La RAM (<em>Random Access Memory</em>) permite acceder rápidamente a cualquier posición de memoria y funciona como área de trabajo de la CPU. Es volátil, por lo que pierde la información almacenada cuando el sistema se apaga.</p>
-            <p>Entre las tecnologías comunes están <strong>DRAM</strong>, <strong>SRAM</strong>, <strong>SDRAM</strong> y las generaciones <strong>DDR</strong>. Los módulos DIMM y SO-DIMM se instalan en la tarjeta madre; su capacidad, velocidad y número de canales influyen en el rendimiento.</p>
+      <!-- ========== TEMA 1.1 ========== -->
+      <article id="tema-1-1" class="tema">
+        <h2 class="section-title">1.1 Modelos de arquitecturas</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>Los modelos de arquitectura describen la forma en que se organizan los componentes de un sistema y cómo se ejecutan las instrucciones. La arquitectura secuencial clásica procesa una instrucción a la vez; el pipeline (segmentación) divide la ejecución en etapas para procesar varias instrucciones simultáneamente; y el multiprocesamiento utiliza múltiples procesadores para trabajar en paralelo.</p>
+            <p>La elección del modelo influye directamente en el rendimiento, el costo de fabricación y la complejidad del sistema. No existe un modelo "mejor" universal; cada uno responde a un balance distinto entre velocidad, consumo de energía y escalabilidad, dependiendo de si se destina a un servidor, una PC de escritorio o un dispositivo móvil.</p>
           </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_2_2_01.png" alt="Módulos de RAM">
-            <figcaption>Módulos de memoria RAM instalados.</figcaption>
-          </figure>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_2_2_02.png" alt="Capas de memoria">
-          <figcaption>Representación de capas y módulos de memoria RAM.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.2.3 · Layout B ========== -->
-      <article id="tema-1-2-2-3" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.2.3</span>
-          <h4>Memoria caché</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_2_3_01.png" alt="Niveles de caché">
-            <figcaption>Niveles de memoria caché L1, L2 y L3.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>La memoria caché es una memoria de alta velocidad que guarda temporalmente datos e instrucciones de uso frecuente para reducir el tiempo de acceso de la CPU a la RAM. Sus niveles más comunes son <strong>L1</strong>, pequeña y rápida; <strong>L2</strong>, de mayor capacidad; y <strong>L3</strong>, generalmente compartida entre varios núcleos.</p>
-            <p>Al buscar un dato, el procesador consulta primero la caché y recurre a la memoria principal si no lo encuentra.</p>
-          </div>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_2_3_02.png" alt="Chip de caché">
-          <figcaption>Chip que representa la memoria caché del procesador.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.3 · Layout A ========== -->
-      <article id="tema-1-2-3" class="tema tema-sub tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.3</span>
-          <h3>Manejo de la entrada/salida</h3>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>La entrada/salida (E/S) permite que la computadora se comunique con periféricos como teclados, pantallas, unidades de almacenamiento y dispositivos de red. Los módulos de E/S actúan como intermediarios entre la CPU y esos dispositivos, coordinando señales y transferencias de datos.</p>
-            <p>Existen varios métodos para gestionar la E/S: programada, por interrupciones, por DMA y mediante canales dedicados.</p>
-          </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_3_01.png" alt="Periféricos">
-            <figcaption>Dispositivos periféricos conectados al sistema.</figcaption>
-          </figure>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_3_02.png" alt="Flujo E/S">
-          <figcaption>Flujo de comunicación entre la computadora y los periféricos.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.3.1 · Layout B ========== -->
-      <article id="tema-1-2-3-1" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.3.1</span>
-          <h4>Módulos de entrada/salida</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_3_1_01.png" alt="Módulo de E/S">
-            <figcaption>Estructura de un módulo de entrada y salida.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>Los módulos de E/S gestionan la transferencia de datos, las señales de control y la sincronización entre la CPU y los dispositivos externos. Se conectan al bus del sistema, reciben instrucciones del procesador y comunican los resultados mediante registros internos.</p>
-            <p>Algunos ejemplos son los controladores de teclado, mouse, disco, tarjeta de red y puertos USB.</p>
-          </div>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_3_1_02.png" alt="Dispositivos conectados">
-          <figcaption>Módulos y dispositivos conectados al sistema.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.3.2 · Layout A ========== -->
-      <article id="tema-1-2-3-2" class="tema tema-sub2 tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.3.2</span>
-          <h4>Entrada/salida programada</h4>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>En la E/S programada, la CPU envía una orden al módulo y consulta repetidamente su estado (<em>polling</em>) hasta que el dispositivo está listo. Entonces transfiere el dato y continúa con el programa.</p>
-            <p>El método es sencillo y da control directo al procesador, pero la espera activa mantiene ocupada a la CPU y desperdicia ciclos que podrían utilizarse en otras tareas.</p>
-          </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_3_2_01.png" alt="E/S programada">
-            <figcaption>Flujo de entrada y salida programada con consulta activa.</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <!-- ========== TEMA 1.2.3.3 · Layout B ========== -->
-      <article id="tema-1-2-3-3" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.3.3</span>
-          <h4>Entrada/salida mediante interrupciones</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_3_3_01.png" alt="Interrupciones">
-            <figcaption>Secuencia de atención y retorno de una interrupción.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>Con E/S por interrupciones, un dispositivo avisa a la CPU cuando requiere atención, de modo que el procesador no necesita esperar activamente. La CPU termina la instrucción en curso, guarda su estado, ejecuta la rutina de servicio (<strong>ISR</strong>) y después retoma la tarea interrumpida.</p>
-            <p>Las interrupciones pueden originarse en hardware o software; algunas pueden enmascararse temporalmente y las no enmascarables requieren atención inmediata.</p>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_1_01.png" alt="Modelo de arquitectura 1">
+            <span class="image-caption">Comparación entre arquitecturas secuenciales y paralelas.</span>
+            <img src="imagenes/unidades/unidad1/1_1_02.png" alt="Modelo de arquitectura 2" style="margin-top: 1rem;">
+            <span class="image-caption">Componentes de una arquitectura típica.</span>
           </div>
         </div>
       </article>
 
-      <!-- ========== TEMA 1.2.3.4 · Layout A ========== -->
-      <article id="tema-1-2-3-4" class="tema tema-sub2 tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.3.4</span>
-          <h4>Acceso directo a memoria</h4>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>El acceso directo a memoria (<strong>DMA</strong>) permite transferir bloques de datos entre un dispositivo de E/S y la memoria principal sin que la CPU supervise continuamente cada dato. El controlador DMA solicita el bus, realiza la transferencia y notifica al procesador cuando termina.</p>
-            <p>Este mecanismo libera a la CPU para otras tareas y es útil en dispositivos como unidades de almacenamiento, tarjetas de red, sonido y video.</p>
+      <!-- ========== TEMA 1.1.1 ========== -->
+      <article id="tema-1-1-1" class="tema">
+        <h2 class="section-title">1.1.1 Clásicas</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Las arquitecturas clásicas ejecutan las instrucciones de forma estrictamente secuencial mediante el ciclo de búsqueda (fetch), decodificación (decode) y ejecución (execute). Un modelo representativo es la <strong>arquitectura de Von Neumann</strong>, propuesta en 1945, que utiliza una única memoria compartida para almacenar tanto los datos como las instrucciones.</p>
+            <p>Sus componentes principales son la CPU (Unidad de Control y ALU), la memoria principal, la unidad de entrada/salida y el bus del sistema. Aunque es la base de las computadoras modernas, sufre del "cuello de botella de Von Neumann", ya que al compartir el mismo bus, la CPU no puede leer una instrucción y leer/escribir datos al mismo tiempo.</p>
           </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_3_4_01.png" alt="DMA">
-            <figcaption>Transferencia directa de datos entre un dispositivo y la memoria mediante DMA.</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <!-- ========== TEMA 1.2.3.5 · Layout B ========== -->
-      <article id="tema-1-2-3-5" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.3.5</span>
-          <h4>Canales y procesadores de entrada/salida</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_3_5_01.png" alt="Canal de E/S">
-            <figcaption>Canal de entrada y salida que coordina varios dispositivos.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>Los canales de E/S son procesadores especializados que administran transferencias entre periféricos y memoria de manera autónoma, reduciendo la intervención de la CPU. Los <strong>canales selectores</strong> atienden dispositivos de alta velocidad; los <strong>multiplexores</strong> permiten atender varios dispositivos más lentos.</p>
-            <p>Al delegar estas operaciones, el sistema puede procesar E/S en paralelo y reducir la cantidad de interrupciones que atiende el procesador principal.</p>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_1_1_01.png" alt="Von Neumann 1">
+            <span class="image-caption">Diagrama de la arquitectura clásica de Von Neumann.</span>
+            <img src="imagenes/unidades/unidad1/1_1_1_02.png" alt="Von Neumann 2" style="margin-top: 1rem;">
           </div>
         </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_3_5_02.png" alt="Jerarquía de procesadores">
-          <figcaption>Jerarquía de procesadores y dispositivos de E/S.</figcaption>
-        </figure>
       </article>
 
-      <!-- ========== TEMA 1.2.4 · Layout A ========== -->
-      <article id="tema-1-2-4" class="tema tema-sub tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.4</span>
-          <h3>Buses</h3>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>Un bus es un sistema de comunicación compartido que conecta la CPU, la memoria y los dispositivos de entrada/salida. Está formado por líneas de transmisión paralelas que transportan datos, direcciones y señales de control entre los componentes.</p>
-            <p>El ancho del bus determina cuántos bits pueden transferirse en un ciclo y afecta el rendimiento general del sistema.</p>
+      <!-- ========== TEMA 1.1.2 ========== -->
+      <article id="tema-1-1-2" class="tema">
+        <h2 class="section-title">1.1.2 Segmentadas</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>La arquitectura segmentada, también conocida como <em>pipeline</em>, divide la ejecución de una instrucción en varias etapas independientes (búsqueda, decodificación, ejecución, memoria, escritura). Mientras una instrucción se está ejecutando, la siguiente se está decodificando y la subsiguiente se está buscando.</p>
+            <p>Esto aumenta drásticamente la cantidad de instrucciones completadas por unidad de tiempo (<em>throughput</em>). Sin embargo, puede producir "riesgos" (hazards) de datos, de control o estructurales, que son situaciones donde la siguiente instrucción no puede ejecutarse en el ciclo esperado y el pipeline debe detenerse (stall).</p>
+            <blockquote class="quote">"El pipeline no ejecuta más rápido cada instrucción: ejecuta más instrucciones a la vez."</blockquote>
           </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_4_01.png" alt="Transferencia por buses">
-            <figcaption>Transferencia de datos, direcciones y control por los buses.</figcaption>
-          </figure>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_4_02.png" alt="Buses conectando componentes">
-          <figcaption>Buses que conectan la CPU con la memoria y los dispositivos.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.4.1 · Layout B ========== -->
-      <article id="tema-1-2-4-1" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.4.1</span>
-          <h4>Tipos de buses</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_4_1_01.png" alt="Tipos de buses">
-            <figcaption>CPU, bus de direcciones y bus de control.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>El <strong>bus de datos</strong> transporta información entre la CPU, la memoria y los dispositivos; su ancho puede ser de 8, 16, 32 o 64 bits. El <strong>bus de direcciones</strong> indica la posición de memoria a la que se desea acceder. El <strong>bus de control</strong> transmite señales como lectura, escritura e interrupción para coordinar las operaciones.</p>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_1_2_01.png" alt="Segmentadas 1">
+            <span class="image-caption">Etapas de instrucciones ejecutándose en pipeline.</span>
+            <img src="imagenes/unidades/unidad1/1_1_2_02.png" alt="Segmentadas 2" style="margin-top: 1rem;">
           </div>
         </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_4_1_02.png" alt="Buses en tarjeta madre">
-          <figcaption>Rutas de buses en una tarjeta madre.</figcaption>
-        </figure>
       </article>
 
-      <!-- ========== TEMA 1.2.4.2 · Layout A ========== -->
-      <article id="tema-1-2-4-2" class="tema tema-sub2 tema-layout-a">
-        <header class="tema-header">
-          <span class="tema-num">1.2.4.2</span>
-          <h4>Estructura de los buses</h4>
-        </header>
-
-        <div class="tema-layout">
-          <div class="tema-body">
-            <p>La estructura de un bus comprende líneas físicas de transmisión, cada una capaz de conducir un bit a la vez. Por ello, un bus de 32 bits puede transportar 4 bytes por ciclo y uno de 64 bits, 8 bytes.</p>
-            <p>Las transferencias siguen protocolos que coordinan el reloj, la asignación del bus (arbitraje) y la confirmación entre dispositivos (<em>handshaking</em>).</p>
+      <!-- ========== TEMA 1.1.3 ========== -->
+      <article id="tema-1-1-3" class="tema">
+        <h2 class="section-title">1.1.3 Multiprocesamiento</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>En una arquitectura de multiprocesamiento, dos o más procesadores trabajan de manera simultánea y comparten recursos (memoria, buses, periféricos). Esto permite aumentar el rendimiento, ejecutar múltiples hilos de ejecución en paralelo y mejorar la tolerancia a fallos.</p>
+            <p>Existen dos clasificaciones principales: los sistemas <strong>simétricos (SMP)</strong>, donde todos los procesadores son iguales y comparten la misma memoria y sistema operativo; y los <strong>asimétricos (AMP)</strong>, donde un procesador maestro (master) asigna tareas específicas a los procesadores esclavos (slaves).</p>
           </div>
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_4_2_01.png" alt="Estructura del bus">
-            <figcaption>Líneas de datos, direcciones y control.</figcaption>
-          </figure>
-        </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_4_2_02.png" alt="Señales del bus">
-          <figcaption>Señales eléctricas transmitidas por las líneas del bus.</figcaption>
-        </figure>
-      </article>
-
-      <!-- ========== TEMA 1.2.4.3 · Layout B ========== -->
-      <article id="tema-1-2-4-3" class="tema tema-sub2 tema-layout-b">
-        <header class="tema-header">
-          <span class="tema-num">1.2.4.3</span>
-          <h4>Jerarquías de buses</h4>
-        </header>
-
-        <div class="tema-layout">
-          <figure class="tema-figure">
-            <img src="imagenes/unidades/unidad1/1_2_4_3_01.png" alt="Jerarquía de buses">
-            <figcaption>Jerarquía que conecta la CPU, un puente y los dispositivos.</figcaption>
-          </figure>
-          <div class="tema-body">
-            <p>Los <strong>buses primarios</strong> conectan directamente la CPU con la memoria principal y ofrecen mayor velocidad y ancho de banda. Los <strong>buses secundarios</strong> enlazan periféricos y controladores de E/S, normalmente a menor velocidad.</p>
-            <p>Interconexiones como <strong>PCI Express</strong> permiten comunicar componentes mediante enlaces de alta velocidad. Organizar los buses jerárquicamente equilibra rendimiento y costo.</p>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_1_3_01.png" alt="Multiprocesamiento 1">
+            <span class="image-caption">Sistema multiprocesador simétrico y asimétrico.</span>
+            <img src="imagenes/unidades/unidad1/1_1_3_02.png" alt="Multiprocesamiento 2" style="margin-top: 1rem;">
+            <img src="imagenes/unidades/unidad1/1_1_3_03.png" alt="Multiprocesamiento 3" style="margin-top: 1rem;">
           </div>
         </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_4_3_02.png" alt="Diagrama de buses">
-          <figcaption>Diagrama de una jerarquía de buses y dispositivos.</figcaption>
-        </figure>
       </article>
 
-      <!-- ========== TEMA 1.2.5 · Layout C ========== -->
-      <article id="tema-1-2-5" class="tema tema-sub tema-layout-c">
-        <header class="tema-header">
-          <span class="tema-num">1.2.5</span>
-          <h3>Interrupciones</h3>
-        </header>
-
-        <div class="tema-body cols-2">
-          <p>Una interrupción es una señal que pausa temporalmente la ejecución normal de la CPU para atender un evento prioritario. El procesador guarda su estado, ejecuta la rutina de servicio correspondiente y luego reanuda la tarea original.</p>
-          <p>Las interrupciones pueden ser <strong>externas</strong>, generadas por dispositivos; de <strong>software</strong>, provocadas por instrucciones; o <strong>internas</strong>, originadas por eventos como una división entre cero.</p>
-          <p>Al evitar la espera activa, permiten que la CPU atienda otros trabajos y responda a eventos con mayor eficiencia.</p>
+      <!-- ========== TEMA 1.2 (SIN IMAGEN, ANCHO COMPLETO) ========== -->
+      <article id="tema-1-2" class="tema">
+        <h2 class="section-title">1.2 Análisis de componentes</h2>
+        <div style="max-width: 800px;">
+          <p>Los componentes de una computadora colaboran estrechamente para procesar instrucciones y comunicar el sistema con el exterior. La <strong>CPU</strong> (Unidad Central de Procesamiento) ejecuta y coordina las operaciones lógicas y aritméticas; la <strong>memoria</strong> conserva temporalmente los datos e instrucciones; los <strong>buses</strong> transportan la información entre los distintos módulos; y los <strong>módulos de entrada/salida</strong> gestionan la comunicación con los periféricos.</p>
+          <p>Analizar cada componente por separado nos ayuda a entender cómo interactúan entre sí y por qué ciertas decisiones de diseño (como el tamaño de la caché o el ancho de un bus) impactan directamente en el rendimiento y la velocidad final del sistema.</p>
         </div>
-
-        <figure class="tema-figure">
-          <img src="imagenes/unidades/unidad1/1_2_5_01.png" alt="Interrupciones">
-          <figcaption>Atención de una interrupción y retorno al programa.</figcaption>
-        </figure>
       </article>
 
-      <!-- PIE -->
+      <!-- ========== TEMA 1.2.1 ========== -->
+      <article id="tema-1-2-1" class="tema">
+        <h2 class="section-title">1.2.1 Arquitecturas</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Una arquitectura de computadora integra los componentes de procesamiento, almacenamiento y comunicación en un sistema coordinado. Existen dos grandes filosofías de diseño en cuanto al conjunto de instrucciones: <strong>CISC</strong> (Complex Instruction Set Computer), con instrucciones complejas y de longitud variable, y <strong>RISC</strong> (Reduced Instruction Set Computer), con instrucciones simples y optimizadas que se ejecutan en un solo ciclo de reloj.</p>
+            <p>Existen arquitecturas orientadas a servidores (priorizando la potencia y capacidad), a dispositivos móviles (priorizando la eficiencia energética, como la arquitectura ARM) y a sistemas embebidos, cada una optimizando distintos aspectos de la ecuación.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_1_01.png" alt="Arquitecturas 1">
+            <span class="image-caption">Comparativa entre arquitecturas RISC y CISC.</span>
+            <img src="imagenes/unidades/unidad1/1_2_1_02.png" alt="Arquitecturas 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.1.1 ========== -->
+      <article id="tema-1-2-1-1" class="tema">
+        <h2 class="section-title">1.2.1.1 Unidad Central de Procesamiento</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>La CPU es el cerebro de la computadora. Interpreta y ejecuta las instrucciones almacenadas en la memoria, procesa los datos y coordina el funcionamiento de todos los demás componentes del sistema.</p>
+            <p>Se divide internamente en tres partes fundamentales: la <strong>Unidad de Control (UC)</strong>, que decodifica las instrucciones y dirige a los demás componentes; la <strong>Unidad Aritmético-Lógica (ALU)</strong>, que realiza los cálculos; y los <strong>Registros</strong>, que son memorias ultrarrápidas dentro del chip. La frecuencia de reloj (medida en GHz) y el número de núcleos determinan gran parte de su rendimiento.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_1_1_01.png" alt="CPU 1">
+            <span class="image-caption">Relación entre unidad de control, ALU y registros.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.1.2 ========== -->
+      <article id="tema-1-2-1-2" class="tema">
+        <h2 class="section-title">1.2.1.2 Unidad Aritmética Lógica</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>La ALU (Arithmetic Logic Unit) es el componente de la CPU encargado de realizar todas las operaciones matemáticas (suma, resta, multiplicación, división) y las operaciones lógicas (comparaciones como AND, OR, NOT, XOR).</p>
+            <p>Recibe sus operandos desde los registros de la CPU, ejecuta la operación indicada por la Unidad de Control y entrega el resultado. Sus circuitos internos están compuestos por puertas lógicas, sumadores y comparadores. Un ejemplo claro: si le pedimos sumar en binario <code>0101 + 0011</code>, la ALU procesará los bits y devolverá <code>1000</code> (5 + 3 = 8).</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_1_2_01.png" alt="ALU 1">
+            <span class="image-caption">Operandos de entrada y operaciones dentro de la ALU.</span>
+            <img src="imagenes/unidades/unidad1/1_2_1_2_02.png" alt="ALU 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.1.3 ========== -->
+      <article id="tema-1-2-1-3" class="tema">
+        <h2 class="section-title">1.2.1.3 Registros</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>Los registros son celdas de memoria de altísima velocidad integradas dentro del propio procesador. Su capacidad es muy limitada (generalmente de 32 o 64 bits), pero su acceso es prácticamente instantáneo, sin los retardos de la memoria RAM.</p>
+            <p>Algunos registros esenciales son: el <strong>Contador de Programa (PC)</strong>, que guarda la dirección de la siguiente instrucción a ejecutar; el <strong>Acumulador (AC)</strong>, que almacena los resultados de las operaciones de la ALU; y el <strong>Registro de Instrucción (IR)</strong>, que guarda la instrucción que se está decodificando en ese momento.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_1_3_01.png" alt="Registros 1">
+            <span class="image-caption">Registros internos y su conexión con la ALU.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.1.4 ========== -->
+      <article id="tema-1-2-1-4" class="tema">
+        <h2 class="section-title">1.2.1.4 Buses</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>A nivel interno del procesador, los buses son las autopistas de comunicación que conectan la CPU, la memoria y los dispositivos de entrada/salida. Están compuestos por un conjunto de líneas o pistas de cobre por donde viajan los impulsos eléctricos (los bits).</p>
+            <p>El <strong>bus de datos</strong> transporta la información en sí (bidireccional). El <strong>bus de direcciones</strong> indica la ubicación de memoria a la que se quiere acceder (unidireccional desde la CPU). Y el <strong>bus de control</strong> transmite señales de sincronización, como lectura, escritura o interrupción. El ancho de estos buses (ej. 32 o 64 bits) determina cuánta información puede viajar al mismo tiempo.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_1_4_01.png" alt="Buses 1">
+            <span class="image-caption">Funciones del bus de datos, direcciones y control.</span>
+            <img src="imagenes/unidades/unidad1/1_2_1_4_02.png" alt="Buses 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.2 ========== -->
+      <article id="tema-1-2-2" class="tema">
+        <h2 class="section-title">1.2.2 Memoria</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>La memoria es el componente que almacena los datos y las instrucciones que necesita la CPU. Sin ella, el procesador no tendría de dónde obtener la información para trabajar. La memoria principal (RAM) ofrece acceso rápido a los datos en uso, mientras que el almacenamiento secundario (discos duros, SSD) conserva los datos de forma permanente.</p>
+            <p>El diseño de un sistema de memoria en una computadora busca siempre un balance perfecto entre tres factores que están en constante conflicto: la velocidad de acceso, la capacidad de almacenamiento y el costo por bit. Es imposible tener una memoria que sea a la vez ultrarrápida, gigantesca y barata, por eso se utilizan jerarquías.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_2_01.png" alt="Memoria 1">
+            <span class="image-caption">Dispositivos de almacenamiento.</span>
+            <img src="imagenes/unidades/unidad1/1_2_2_02.png" alt="Memoria 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.2.1 ========== -->
+      <article id="tema-1-2-2-1" class="tema">
+        <h2 class="section-title">1.2.2.1 Conceptos básicos</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>La memoria principal (RAM) es rápida y volátil: guarda temporalmente los datos y programas en uso, pero pierde todo su contenido cuando se apaga el equipo. En contraste, el almacenamiento secundario (como un disco SSD) es no volátil y conserva los datos de forma permanente, aunque sea mucho más lento.</p>
+            <p>Debido a esto, existe la <strong>jerarquía de memoria</strong>, que ordena los niveles según su velocidad, capacidad y costo. De más rápido y caro a más lento y barato: Registros de la CPU -> Memoria Caché -> Memoria RAM -> Almacenamiento Secundario. Cuanto más cerca está la memoria del procesador, mayor es su velocidad y menor es su capacidad.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_2_1_01.png" alt="Jerarquía de memoria 1">
+            <span class="image-caption">Pirámide o jerarquía de memoria.</span>
+            <img src="imagenes/unidades/unidad1/1_2_2_1_02.png" alt="Jerarquía de memoria 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.2.2 ========== -->
+      <article id="tema-1-2-2-2" class="tema">
+        <h2 class="section-title">1.2.2.2 Memoria principal</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>La RAM (Random Access Memory) permite acceder rápidamente a cualquier posición de memoria en el mismo tiempo (acceso aleatorio) y funciona como el área de trabajo activo de la CPU. Al ser volátil, requiere de energía constante para mantener la información.</p>
+            <p>Existen dos grandes tecnologías: <strong>DRAM</strong> (Dynamic RAM), más barata y lenta, usada para la memoria principal; y <strong>SRAM</strong> (Static RAM), mucho más rápida pero cara, usada para la memoria caché. Los módulos comerciales actuales usan generaciones de tecnología <strong>DDR</strong> (Double Data Rate), instalados en zócalos DIMM de la tarjeta madre. La cantidad de canales y la frecuencia influyen notablemente en el rendimiento general.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_2_2_01.png" alt="RAM 1">
+            <span class="image-caption">Módulos de memoria RAM instalados.</span>
+            <img src="imagenes/unidades/unidad1/1_2_2_2_02.png" alt="RAM 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.2.3 ========== -->
+      <article id="tema-1-2-2-3" class="tema">
+        <h2 class="section-title">1.2.2.3 Memoria caché</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>La memoria caché es una memoria SRAM de altísima velocidad que se coloca entre la CPU y la RAM. Su función es almacenar los datos e instrucciones que el procesador utiliza con mayor frecuencia, evitando que tenga que ir a la lenta RAM cada vez que los necesita.</p>
+            <p>Se divide en niveles: <strong>Caché L1</strong> (la más pequeña y rápida, integrada en cada núcleo), <strong>Caché L2</strong> (de mayor capacidad y ligeramente más lenta) y <strong>Caché L3</strong> (compartida por todos los núcleos del procesador). Cuando el procesador busca un dato, primero mira en L1, luego L2, L3 y finalmente en la RAM. Si lo encuentra en caché, se denomina "hit"; si no, es un "miss".</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_2_3_01.png" alt="Caché 1">
+            <span class="image-caption">Niveles de memoria caché L1, L2 y L3.</span>
+            <img src="imagenes/unidades/unidad1/1_2_2_3_02.png" alt="Caché 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.3 ========== -->
+      <article id="tema-1-2-3" class="tema">
+        <h2 class="section-title">1.2.3 Manejo E/S</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>La Entrada/Salida (E/S) es el mecanismo que permite a la computadora comunicarse con el mundo exterior: teclados, ratones, pantallas, impresoras, discos duros y redes. Dado que los periféricos son mucho más lentos que el procesador, el manejo de la E/S es un desafío de diseño importante para no frenar a la CPU.</p>
+            <p>Existen varios métodos para gestionar la E/S: la E/S programada (la CPU espera activamente), la E/S por interrupciones (el dispositivo avisa a la CPU), el Acceso Directo a Memoria (DMA) donde un controlador mueve los datos, y el uso de procesadores o canales de E/S dedicados exclusivamente a esta tarea.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_3_01.png" alt="E/S 1">
+            <span class="image-caption">Dispositivos periféricos.</span>
+            <img src="imagenes/unidades/unidad1/1_2_3_02.png" alt="E/S 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.3.1 ========== -->
+      <article id="tema-1-2-3-1" class="tema">
+        <h2 class="section-title">1.2.3.1 Módulos E/S</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Los módulos de E/S (también llamados controladores o interfaces) son los encargados de conectar el bus del sistema con los dispositivos periféricos. Su función es gestionar la transferencia de datos, las señales de control y la sincronización de velocidades, ya que la CPU habla muy rápido y los dispositivos externos muy lento.</p>
+            <p>Reciben instrucciones del procesador, interactúan con el periférico en su propio lenguaje y comunican los resultados a la CPU. Ejemplos claros son el controlador de teclado, el controlador de disco (SATA/NVMe), la tarjeta de red (Ethernet/Wi-Fi) o los controladores de los puertos USB.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_3_1_01.png" alt="Módulos 1">
+            <span class="image-caption">Estructura de un módulo de E/S.</span>
+            <img src="imagenes/unidades/unidad1/1_2_3_1_02.png" alt="Módulos 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.3.2 ========== -->
+      <article id="tema-1-2-3-2" class="tema">
+        <h2 class="section-title">1.2.3.2 E/S programada</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>En la E/S programada, la CPU tiene el control total. Envía una orden al módulo de E/S y luego se queda en un bucle revisando constantemente el registro de estado del dispositivo. Este proceso se conoce como <em>polling</em> o espera activa. Cuando el dispositivo indica que está listo, la CPU transfiere el dato.</p>
+            <p>Es un método muy sencillo de implementar y económico, pero extremadamente ineficiente. La CPU desperdicia miles de ciclos de reloj simplemente preguntando "¿ya estás listo?", en lugar de estar ejecutando otros programas útiles mientras el periférico termina su trabajo.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_3_2_01.png" alt="Programada 1">
+            <span class="image-caption">Flujo de E/S programada (Polling).</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.3.3 ========== -->
+      <article id="tema-1-2-3-3" class="tema">
+        <h2 class="section-title">1.2.3.3 E/S por interrupciones</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Para resolver el problema de la espera activa, se creó la E/S por interrupciones. Aquí, la CPU simplemente le dice al módulo "avísame cuando termines" y se va a hacer otras tareas. Cuando el dispositivo está listo, envía una señal eléctrica de interrupción a la CPU.</p>
+            <p>La CPU detiene momentáneamente el programa que estaba ejecutando, guarda su estado actual, y salta a ejecutar una pequeña rutina llamada <strong>ISR</strong> (Interrupt Service Routine). Una vez que atiende al dispositivo, regresa exactamente al punto donde se quedó. Esto mejora enormemente la eficiencia del sistema.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_3_3_01.png" alt="Interrupciones 1">
+            <span class="image-caption">Secuencia de una interrupción.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.3.4 ========== -->
+      <article id="tema-1-2-3-4" class="tema">
+        <h2 class="section-title">1.2.3.4 Acceso directo a memoria</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>El Acceso Directo a Memoria (<strong>DMA</strong>) es una técnica avanzada que permite transferir bloques enteros de datos entre un periférico (como un disco o una tarjeta de red) y la memoria RAM, sin que la CPU tenga que intervenir dato por dato.</p>
+            <p>Se utiliza un controlador DMA (DMAC) que toma el control del bus del sistema, realiza la transferencia directamente en la memoria y, al terminar, envía una sola interrupción a la CPU para avisarle que el bloque ya está listo. Esto libera al procesador para enfocarse en cálculos complejos mientras los datos fluyen por detrás.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_3_4_01.png" alt="DMA 1">
+            <span class="image-caption">Transferencia por DMA.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.3.5 ========== -->
+      <article id="tema-1-2-3-5" class="tema">
+        <h2 class="section-title">1.2.3.5 Canales y procesadores E/S</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>En sistemas mainframe o servidores de alto rendimiento, se utilizan canales de E/S: verdaderos procesadores especializados cuyo único trabajo es manejar la E/S. Pueden ejecutar programas de E/S de forma totalmente autónoma.</p>
+            <p>Los <strong>canales selectores</strong> se dedican a atender un solo dispositivo de alta velocidad a la vez. Por otro lado, los <strong>canales multiplexores</strong> pueden atender simultáneamente a múltiples dispositivos más lentos, entrelazando las transferencias. Esto permite que el sistema procese E/S en paralelo masivo y reduce drásticamente la carga del procesador principal.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_3_5_01.png" alt="Canales 1">
+            <span class="image-caption">Canal de E/S coordinando dispositivos.</span>
+            <img src="imagenes/unidades/unidad1/1_2_3_5_02.png" alt="Canales 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.4 ========== -->
+      <article id="tema-1-2-4" class="tema">
+        <h2 class="section-title">1.2.4 Buses</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>Un bus es un conjunto de conductores eléctricos (líneas) que permiten la comunicación entre los distintos componentes de la computadora. Se puede imaginar como una autopista compartida por donde viajan los datos, las direcciones y las órdenes de control.</p>
+            <p>Como es un recurso compartido, solo un dispositivo puede transmitir datos a la vez, por lo que se requieren protocolos de arbitraje para decidir quién usa el bus. El ancho del bus (cantidad de bits que puede transferir a la vez) y su frecuencia (velocidad) son determinantes para el rendimiento global del sistema.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_4_01.png" alt="Buses 1">
+            <span class="image-caption">Transferencia por los buses.</span>
+            <img src="imagenes/unidades/unidad1/1_2_4_02.png" alt="Buses 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.4.1 ========== -->
+      <article id="tema-1-2-4-1" class="tema">
+        <h2 class="section-title">1.2.4.1 Tipos de buses</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Los buses se clasifican según la información que transportan. El <strong>bus de datos</strong> lleva la información real entre la CPU, la memoria y los periféricos; su ancho determina el tamaño de palabra (8, 16, 32, 64 bits).</p>
+            <p>El <strong>bus de direcciones</strong> envía la ubicación exacta de memoria o del dispositivo que se quiere leer o escribir; su ancho determina cuánta memoria RAM puede direccionar la CPU. Por último, el <strong>bus de control</strong> transporta las señales de sincronización (reloj), peticiones de lectura/escritura y señales de interrupción, asegurando que todo ocurra en el momento exacto.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_4_1_01.png" alt="Tipos 1">
+            <span class="image-caption">Bus de direcciones y control.</span>
+            <img src="imagenes/unidades/unidad1/1_2_4_1_02.png" alt="Tipos 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.4.2 ========== -->
+      <article id="tema-1-2-4-2" class="tema">
+        <h2 class="section-title">1.2.4.2 Estructura de buses</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>La estructura física del bus se compone de pistas de cobre en la placa base. Cuando múltiples dispositivos comparten el bus (como la CPU, la RAM y el disco), se necesita un árbitro de bus para evitar colisiones de datos.</p>
+            <p>Las transferencias se rigen por protocolos de comunicación. Estos incluyen el uso de una señal de reloj (sincronía), el <strong>arbitraje</strong> (decidir quién usa el bus primero) y el <em>handshaking</em> o protocolo de saludo, donde el emisor avisa que tiene datos listos y el receptor confirma que está preparado para recibirlos antes de la transferencia real.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_4_2_01.png" alt="Estructura 1">
+            <span class="image-caption">Líneas de datos, direcciones y control.</span>
+            <img src="imagenes/unidades/unidad1/1_2_4_2_02.png" alt="Estructura 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.4.3 ========== -->
+      <article id="tema-1-2-4-3" class="tema">
+        <h2 class="section-title">1.2.4.3 Jerarquías de buses</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Para evitar que los dispositivos lentos ralenticen a los rápidos, las computadoras modernas usan una jerarquía de buses. Los <strong>buses primarios</strong> (o front-side bus) conectan la CPU con la memoria RAM y la caché a altísimas velocidades.</p>
+            <p>Los <strong>buses secundarios</strong> conectan los periféricos de E/S y funcionan a menor velocidad. Interconexiones modernas como <strong>PCI Express (PCIe)</strong> utilizan enlaces punto a punto seriales, lo que significa que cada dispositivo tiene su propio "carril" dedicado para enviar datos a gigabytes por segundo, eliminando el cuello de botella de compartir un solo bus.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_4_3_01.png" alt="Jerarquía 1">
+            <span class="image-caption">Jerarquía de buses.</span>
+            <img src="imagenes/unidades/unidad1/1_2_4_3_02.png" alt="Jerarquía 2" style="margin-top: 1rem;">
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== TEMA 1.2.5 ========== -->
+      <article id="tema-1-2-5" class="tema">
+        <h2 class="section-title">1.2.5 Interrupciones</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>Una interrupción es un evento (generalmente una señal eléctrica) que altera el flujo secuencial de ejecución de la CPU, obligándola a atender una petición urgente. Se clasifican en <strong>externas o de hardware</strong> (generadas por periféricos como el teclado o el reloj del sistema), de <strong>software</strong> (provocadas por una instrucción del programa) o <strong>internas</strong> (errores de ejecución, como una división por cero).</p>
+            <p>Al recibir una interrupción, la CPU guarda el contexto actual en una pila, salta a la dirección de memoria donde está la rutina de servicio (ISR), atiende el evento y luego restaura el contexto para continuar sin que el usuario se dé cuenta. Las interrupciones son la base para un sistema operativo multitarea.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad1/1_2_5_01.png" alt="Interrupciones 1">
+            <span class="image-caption">Atención de una interrupción.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== PRESENTACIÓN INTEGRADA ========== -->
+      <section id="presentacion" class="tema" style="margin-top: 8rem;">
+        <h2 class="section-title">Presentación de la Unidad 1</h2>
+        <p style="color: #888; margin-bottom: 1.5rem;">Repasa los conceptos clave con la presentación completa de la unidad.</p>
+        
+        <div class="presentation-wrapper">
+          <!-- Reemplaza el SRC con el link de tu presentación -->
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT_TU_LINK_AQUI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+      </section>
+
       <div class="unit-footer">
         <a href="index.html" class="back-link">← Volver al menú principal</a>
       </div>
-
+      <!-- PIE DE PÁGINA (Idéntico al index) -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="dot"></span>
+            <span>Arquitectura de Computadoras · ITS</span>
+          </div>
+          <div class="footer-links">
+            <a href="unidad1.html">Unidad 1</a>
+            <a href="unidad2.html">Unidad 2</a>
+            <a href="unidad3.html">Unidad 3</a>
+            <a href="unidad4.html">Unidad 4</a>
+          </div>
+          <div class="footer-copy">
+            © 2026 · <span>Todos los derechos reservados</span>
+          </div>
+        </div>
+      </footer>s
     </main>
   </div>
+
   <!-- Botón flotante para volver al menú -->
   <a href="index.html" class="floating-home-btn" aria-label="Volver al menú principal">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -649,6 +543,7 @@
       <polyline points="9 22 9 12 15 12 15 22"/>
     </svg>
   </a>
+
   <script src="script.js"></script>
 </body>
 </html>
