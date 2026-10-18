@@ -416,16 +416,75 @@ body::after {
 
 /* Móviles */
 @media (max-width: 800px) {
-  .app-header { flex-direction: column; padding: 1rem; gap: 1rem; }
-  .header-tabs { margin: 0; width: 100%; max-width: none; }
-  .header-actions { width: 100%; justify-content: center; }
+  .app-header { 
+    flex-direction: column; /* Apila todo hacia abajo */
+    padding: 1rem; 
+    gap: 1rem; 
+    height: auto; /* Permite que el header crezca según su contenido */
+  }
+  
+  .header-tabs { 
+    margin: 0; 
+    width: 100%; 
+    max-width: none; 
+    flex-wrap: wrap; /* Si las pestañas no caben, bajan a la siguiente línea */
+    justify-content: center;
+  }
+  
+  .header-actions { 
+    width: 100%; 
+    justify-content: center; 
+  }
 }
 
 @media (max-width: 600px) {
-  .main-content { padding: 3rem 1rem 2rem; }
-  .tema { margin-bottom: 4rem; }
-  .floating-home-btn { bottom: 1.5rem; right: 1.5rem; width: 44px; height: 44px; }
-  .floating-home-btn svg { width: 18px; height: 18px; }
+ /* 1. Ajustar el Header para que no se rompa */
+  .app-header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    height: auto;
+  }
+  
+  .header-tabs {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    flex-wrap: wrap; /* Si no caben las pestañas, bajan a la siguiente línea */
+    justify-content: center;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* 2. Ajustar el contenido principal */
+  .main-content { 
+    padding: 7rem 1.5rem 3rem; /* Ajustamos el margen superior para el header apilado */
+  }
+  
+  .tema { 
+    margin-bottom: 4rem; 
+  }
+
+  /* 3. Ajustar el botón flotante */
+  .floating-home-btn { 
+    bottom: 1.5rem; 
+    right: 1.5rem; 
+    width: 44px; 
+    height: 44px; 
+  }
+  .floating-home-btn svg { 
+    width: 18px; 
+    height: 18px; 
+  }
+
+  /* 4. El texto en 1 columna para que se lea bien */
+  .split-layout { 
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+  }
 }
 /* ===== BOTÓN VOLVER AL MENÚ (RESTAURADO) ===== */
 .unit-footer {
