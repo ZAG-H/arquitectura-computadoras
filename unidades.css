@@ -497,6 +497,26 @@ body::after {
     margin-bottom: 4rem; 
   }
 }
+  /* 1. Bajar el botón de la hamburguesa un poquito */
+  .sidebar-toggle {
+    top: 1.25rem; /* Lo empujamos hacia abajo para que no se corte */
+    left: 1rem;
+    z-index: 1300; /* Aseguramos que esté por encima de todo */
+  }
+
+  /* 2. Darle espacio al header para que no se aplaste */
+  .app-header {
+    padding-top: 3.5rem; /* <-- Esto empuja el logo ZK y las pestañas hacia abajo, lejos del botón ☰ */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+  }
+
+  /* El resto de tus reglas para el header (brand, tabs, etc.) se quedan igual */
+  /* ... */
 
 @media (max-width: 600px) {
  /* 1. Ajustar el Header para que no se rompa */
@@ -559,6 +579,26 @@ body::after {
     .tema { 
     margin-bottom: 4rem; 
   }
+    /* 1. Bajar el botón de la hamburguesa un poquito */
+  .sidebar-toggle {
+    top: 1.25rem; /* Lo empujamos hacia abajo para que no se corte */
+    left: 1rem;
+    z-index: 1300; /* Aseguramos que esté por encima de todo */
+  }
+
+  /* 2. Darle espacio al header para que no se aplaste */
+  .app-header {
+    padding-top: 3.5rem; /* <-- Esto empuja el logo ZK y las pestañas hacia abajo, lejos del botón ☰ */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+  }
+
+  /* El resto de tus reglas para el header (brand, tabs, etc.) se quedan igual */
+  /* ... */
 }
 /* ===== BOTÓN VOLVER AL MENÚ (RESTAURADO) ===== */
 .unit-footer {
