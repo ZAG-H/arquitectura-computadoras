@@ -435,6 +435,32 @@ body::after {
     width: 100%; 
     justify-content: center; 
   }
+  /* 2. Ajustar el contenido principal */
+  .main-content { 
+    padding: 11rem 1.5rem 3rem; /* Ajustamos el margen superior para el header apilado */
+  }
+  
+  .tema { 
+    margin-bottom: 4rem; 
+  }
+
+  /* 3. Ajustar el botón flotante */
+  .floating-home-btn { 
+    bottom: 1.5rem; 
+    right: 1.5rem; 
+    width: 44px; 
+    height: 44px; 
+  }
+  .floating-home-btn svg { 
+    width: 18px; 
+    height: 18px; 
+  }
+
+  /* 4. El texto en 1 columna para que se lea bien */
+  .split-layout { 
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+  }
 }
 
 @media (max-width: 600px) {
@@ -461,7 +487,7 @@ body::after {
 
   /* 2. Ajustar el contenido principal */
   .main-content { 
-    padding: 7rem 1.5rem 3rem; /* Ajustamos el margen superior para el header apilado */
+    padding: 11rem 1.5rem 3rem; /* Ajustamos el margen superior para el header apilado */
   }
   
   .tema { 
