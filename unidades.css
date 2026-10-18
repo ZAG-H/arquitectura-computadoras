@@ -439,105 +439,125 @@ body::after {
 
 /* Móviles */
 @media (max-width: 800px) {
-  .app-header { 
-    flex-direction: column; /* Apila todo hacia abajo */
-    padding: 1rem; 
-    gap: 1rem; 
-    height: auto; /* Permite que el header crezca según su contenido */
-  }
-  
-  .header-tabs { 
-    margin: 0; 
-    width: 100%; 
-    max-width: none; 
-    flex-wrap: wrap; /* Si las pestañas no caben, bajan a la siguiente línea */
-    justify-content: center;
-  }
-  
-  .header-actions { 
-    width: 100%; 
-    justify-content: center; 
-  }
-  /* 2. Ajustar el contenido principal */
-  .main-content { 
-    padding: 11rem 1.5rem 3rem; /* Ajustamos el margen superior para el header apilado */
-  }
-  
-  .tema { 
-    margin-bottom: 4rem; 
-  }
-.sidebar {
-    padding-bottom: 2rem; /* Espacio extra al final del menú en celular */
-  }s
-  /* 3. Ajustar el botón flotante */
-  .floating-home-btn { 
-    bottom: 1.5rem; 
-    right: 1.5rem; 
-    width: 44px; 
-    height: 44px; 
-  }
-  .floating-home-btn svg { 
-    width: 18px; 
-    height: 18px; 
-  }
-
-  /* 4. El texto en 1 columna para que se lea bien */
-  .split-layout { 
-    grid-template-columns: 1fr; 
-    gap: 2rem; 
-  }
-}
-
-@media (max-width: 600px) {
  /* 1. Ajustar el Header para que no se rompa */
+    /* 1. Encabezado: Todo más compacto y el botón Siguiente a la derecha */
   .app-header {
-    flex-direction: column;
+    flex-direction: row;      /* Logo y botón "Siguiente" en la misma línea */
+    flex-wrap: wrap;          /* Las pestañas bajan a la siguiente línea */
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     gap: 1rem;
     height: auto;
   }
   
+  /* El logo y el botón Siguiente se quedan arriba */
+  .header-brand { width: auto; }
+  .header-actions { width: auto; gap: 0.5rem; }
+
+  /* El botón "Siguiente" se hace más pequeño */
+  .btn-header { padding: 0.4rem 0.8rem; font-size: 0.75rem; }
+
+  /* Las pestañas del centro ocupan su propia fila completa */
   .header-tabs {
+    width: 100%;
     margin: 0;
-    width: 100%;
     max-width: none;
-    flex-wrap: wrap; /* Si no caben las pestañas, bajan a la siguiente línea */
+    flex-wrap: wrap;
     justify-content: center;
   }
-  
-  .header-actions {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* 2. Ajustar el contenido principal */
+ 
+   /* 2. CONTENIDO: El famoso margen para que el título no se corte */
   .main-content { 
-    padding: 11rem 1.5rem 3rem; /* Ajustamos el margen superior para el header apilado */
+    padding: 13rem 1.5rem 3rem; /* <-- 13rem es la clave para que no se trague el título */
   }
-  
-  .tema { 
-    margin-bottom: 4rem; 
+   .unit-hero {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 
-  /* 3. Ajustar el botón flotante */
+  .unit-hero h1 {
+    font-size: 2rem; /* Título un poco más chico para que quepa mejor */
+  }
+
+   /* 3. Ajustar el botón flotante y texto */
   .floating-home-btn { 
-    bottom: 1.5rem; 
-    right: 1.5rem; 
-    width: 44px; 
-    height: 44px; 
+    bottom: 1.5rem; right: 1.5rem; width: 44px; height: 44px; 
   }
-  .floating-home-btn svg { 
-    width: 18px; 
-    height: 18px; 
-  }
+  .floating-home-btn svg { width: 18px; height: 18px; }
 
-  /* 4. El texto en 1 columna para que se lea bien */
   .split-layout { 
     grid-template-columns: 1fr; 
     gap: 2rem; 
   }
   .sidebar {
     padding-bottom: 2rem; /* Espacio extra al final del menú en celular */
+  }
+  .tema { 
+    margin-bottom: 4rem; 
+  }
+}
+
+@media (max-width: 600px) {
+ /* 1. Ajustar el Header para que no se rompa */
+    /* 1. Encabezado: Todo más compacto y el botón Siguiente a la derecha */
+  .app-header {
+    flex-direction: row;      /* Logo y botón "Siguiente" en la misma línea */
+    flex-wrap: wrap;          /* Las pestañas bajan a la siguiente línea */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    height: auto;
+  }
+
+  /* El logo y el botón Siguiente se quedan arriba */
+  .header-brand { width: auto; }
+  .header-actions { width: auto; gap: 0.5rem; }
+
+  /* El botón "Siguiente" se hace más pequeño */
+  .btn-header { padding: 0.4rem 0.8rem; font-size: 0.75rem; }
+
+  /* Las pestañas del centro ocupan su propia fila completa */
+  .header-tabs {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header-tab { padding: 0.4rem 0.6rem; }
+  .header-tab span { display: block; font-size: 0.75rem; } /* Mostramos el texto */
+
+  /* 2. CONTENIDO: El famoso margen para que el título no se corte */
+  .main-content { 
+    padding: 13rem 1.5rem 3rem; /* <-- 13rem es la clave para que no se trague el título */
+  }
+
+  .unit-hero {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .unit-hero h1 {
+    font-size: 2rem; /* Título un poco más chico para que quepa mejor */
+  }
+
+  /* 3. Ajustar el botón flotante y texto */
+  .floating-home-btn { 
+    bottom: 1.5rem; right: 1.5rem; width: 44px; height: 44px; 
+  }
+  .floating-home-btn svg { width: 18px; height: 18px; }
+
+  .split-layout { 
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+  }
+  .sidebar {
+    padding-bottom: 2rem; /* Espacio extra al final del menú en celular */
+  }
+    .tema { 
+    margin-bottom: 4rem; 
   }
 }
 /* ===== BOTÓN VOLVER AL MENÚ (RESTAURADO) ===== */
