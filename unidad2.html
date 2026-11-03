@@ -10,145 +10,348 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="Arquitectura">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="unidades.css?v=unidad1-editorial">
+  <link rel="stylesheet" href="unidades.css?v=unidad2-editorial">
 </head>
-<body>
+<body class="unidad1-page"> <!-- Misma clase para heredar el diseño -->
 
-  <!-- Botón hamburguesa -->
   <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menú lateral">☰</button>
-
-  <!-- Overlay para móvil -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <!-- ===== SIDEBAR (índice de la Unidad 2) ===== -->
+  <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <span class="badge">Unidad 2</span>
       <h2>Organización del procesador</h2>
       <p>Índice de temas</p>
     </div>
-
+    
     <nav class="sidebar-nav">
-      <a href="#tema-2-0"><span class="num">02</span> Organización del procesador</a>
+      <a href="#tema-2-0"><span class="num">2.0</span> Introducción</a>
       <a href="#tema-2-1"><span class="num">2.1</span> Organización del procesador</a>
       <a href="#tema-2-2"><span class="num">2.2</span> Estructura de registros</a>
-      <a href="#tema-2-2-1"><span class="num">2.2.1</span> Registros visibles para el usuario</a>
-      <a href="#tema-2-2-2"><span class="num">2.2.2</span> Registros de control y de estados</a>
-      <a href="#tema-2-2-3"><span class="num">2.2.3</span> Ejemplos de registros de CPU reales</a>
+      <a href="#tema-2-2-1"><span class="num">2.2.1</span> Registros visibles</a>
+      <a href="#tema-2-2-2"><span class="num">2.2.2</span> Registros de control y estados</a>
+      <a href="#tema-2-2-3"><span class="num">2.2.3</span> Ejemplos de registros CPU</a>
       <a href="#tema-2-3"><span class="num">2.3</span> El ciclo de instrucción</a>
-      <a href="#tema-2-3-1"><span class="num">2.3.1</span> Ciclo Fetch-Decode-Execute</a>
+      <a href="#tema-2-3-1"><span class="num">2.3.1</span> Fetch-Decode-Execute</a>
       <a href="#tema-2-3-2"><span class="num">2.3.2</span> Segmentación de instrucciones</a>
       <a href="#tema-2-3-3"><span class="num">2.3.3</span> Conjunto de instrucciones</a>
       <a href="#tema-2-3-4"><span class="num">2.3.4</span> Modos de direccionamiento</a>
-      <a href="#tema-2-4"><span class="num">2.4</span> Casos de estudio de CPU reales</a>
+      <a href="#tema-2-4"><span class="num">2.4</span> Casos de estudio CPU reales</a>
+      
+      <a href="#presentacion-cpus">
+        <span class="num">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </span> Presentación CPUs
+      </a>
+     <a href="#presentacion-unidad2">
+        <span class="num">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </span> Presentación Unidad 2
+      </a>
     </nav>
-
+    
     <div class="sidebar-footer">
-      <a href="index.html" class="back-home">← Volver al menú principal</a>
+      <a href="unidad1.html" class="btn-header">← Unidad 1</a>
+      <a href="unidad3.html" class="btn-header primary">Unidad 3 →</a>
     </div>
   </aside>
 
-  <!-- ===== CONTENIDO DE LA UNIDAD ===== -->
+  <!-- CONTENIDO -->
   <div class="app">
-    <main class="main-content">
 
-      <!-- Encabezado de la unidad -->
-      <header class="unit-hero">
+    <!-- HEADER (Exactamente igual al de la Unidad 1) -->
+    <header class="app-header">
+      <a href="index.html" class="header-brand">
+        <span class="brand-logo">ZK</span>
         <span class="badge">Unidad 2</span>
+      </a>
+
+      <div class="header-tabs">
+        <a href="index.html#unidades" class="header-tab active">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <span>Unidades</span>
+        </a>
+        <a href="index.html#practicas" class="header-tab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Prácticas</span>
+        </a>
+        <a href="index.html#tareas" class="header-tab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span>Tareas</span>
+        </a>
+        <a href="index.html#presentaciones" class="header-tab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Presentaciones</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a href="unidad3.html" class="btn-header primary">Siguiente →</a>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- HERO (Sin la etiqueta flotante) -->
+      <header class="unit-hero">
         <h1>Organización del procesador</h1>
-        <p>Todo el contenido de la unidad en una sola página</p>
+        <p>Exploraremos la arquitectura interna de la CPU, los registros, el ciclo de ejecución de instrucciones y los procesadores que dominan el mercado actual.</p>
       </header>
 
       <!-- ========== TEMA 02 ========== -->
-      <section id="tema-2-0" class="tema">
-        <span class="tema-num">02</span>
-        <h2>Organización del procesador</h2>
-        <p>Aquí va la introduccissssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssón de la Unidad 2. Puedes escribir texto, agregar imágenes, videos, tablas, código, etc.</p>
-
-        <!-- Ejemplo de imagen (descomenta cuando tengas la imagen) -->
-        <!-- <img src="imagenes/procesador.png" alt="Organización del procesador"> -->
-
-        <!-- Ejemplo de video de YouTube -->
-        <!-- <iframe width="100%" height="400" src="https://www.youtube.com/embed/XXXXX" frameborder="0" allowfullscreen></iframe> -->
-      </section>
+      <article id="tema-2-0" class="tema">
+        <h2 class="section-title">2.0 Introducción</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>El procesador, o Unidad Central de Procesamiento (CPU), es el componente encargado de interpretar y ejecutar las instrucciones de un programa. Su organización interna determina la velocidad y eficiencia con la que un sistema puede procesar datos.</p>
+            <p>Para entender cómo funciona, debemos dividirlo en sus partes fundamentales: la Unidad de Control (que dirige la orquesta), la Unidad Aritmético-Lógica (que hace los cálculos) y los Registros (que son la memoria ultrarrápida de trabajo).</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_0_01.png" alt="Estructura general del procesador">
+            <span class="image-caption">Estructura general y flujo de datos en un procesador.</span>
+          </div>
+        </div>
+      </article>
 
       <!-- ========== TEMA 2.1 ========== -->
-      <section id="tema-2-1" class="tema">
-        <span class="tema-num">2.1</span>
-        <h2>Organización del procesador</h2>
-        <p>Contenido del tema 2.1. Aquí explicarás cómo está organizado internamente el procesador.</p>
-      </section>
+      <article id="tema-2-1" class="tema">
+        <h2 class="section-title">2.1 Organización del procesador</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>La organización del procesador se refiere a la forma en que sus componentes operacionales interactúan entre sí. El procesador se comunica con el exterior (memoria y periféricos) a través de sus buses de datos, direcciones y control.</p>
+            <p>Internamente, la Unidad de Control (UC) decodifica las instrucciones traídas de la memoria, mientras que la ALU realiza las operaciones matemáticas y lógicas. Los registros internos guardan temporalmente los datos para que la ALU pueda trabajar a la máxima velocidad posible.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_1_01.png" alt="Diagrama de bloques del procesador">
+            <span class="image-caption">Diagrama de bloques de la Unidad Central de Procesamiento.</span>
+          </div>
+        </div>
+      </article>
 
       <!-- ========== TEMA 2.2 ========== -->
-      <section id="tema-2-2" class="tema">
-        <span class="tema-num">2.2</span>
-        <h2>Estructura de registros</h2>
-        <p>Contenido del tema 2.2. Aquí va la explicación general de los registros del CPU.</p>
-      </section>
+      <article id="tema-2-2" class="tema">
+        <h2 class="section-title">2.2 Estructura de registros</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Los registros son celdas de memoria de altísima velocidad integradas en el propio chip del procesador. Son mucho más rápidos que la memoria caché o la RAM, pero también mucho más pequeños (generalmente de 32 o 64 bits).</p>
+            <p>Su función principal es almacenar los operandos (datos a procesar), los resultados de las operaciones y las direcciones de memoria. Se dividen en dos grandes categorías: visibles para el usuario (usados por los programas) y de control/estado (usados internamente por la CPU).</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_2_01.png" alt="Estructura de registros">
+            <span class="image-caption">Organización interna de los registros de la CPU.</span>
+          </div>
+        </div>
+      </article>
 
-      <section id="tema-2-2-1" class="tema tema-sub">
-        <span class="tema-num">2.2.1</span>
-        <h3>Registros visibles para el usuario</h3>
-        <p>Contenido del subtema 2.2.1. Aquí va la explicación de los registros visibles (AX, BX, CX, DX, etc.).</p>
-      </section>
+      <!-- ========== TEMA 2.2.1 ========== -->
+      <article id="tema-2-2-1" class="tema">
+        <h2 class="section-title">2.2.1 Registros visibles para el usuario</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>Estos registros pueden ser referenciados directamente por las instrucciones del lenguaje máquina o ensamblador. Permiten al programador minimizar las referencias a la memoria principal (RAM) almacenando variables temporales.</p>
+            <p><strong>Registros de propósito general:</strong> Se usan para almacenar datos o direcciones. Por ejemplo, en arquitecturas x86 tenemos los registros EAX, EBX, ECX, EDX. <br>
+            <strong>Registros de propósito específico:</strong> Tienen funciones fijas, como el puntero de pila (ESP/RSP) o el registro de índice (ESI/EDI).</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_2_1_01.png" alt="Registros visibles">
+            <span class="image-caption">Registros de propósito general en la arquitectura x86.</span>
+          </div>
+        </div>
+      </article>
 
-      <section id="tema-2-2-2" class="tema tema-sub">
-        <span class="tema-num">2.2.2</span>
-        <h3>Registros de control y de estados</h3>
-        <p>Contenido del subtema 2.2.2. Aquí va la explicación de los registros de control (PC, IR, MAR, MBR, etc.).</p>
-      </section>
+      <!-- ========== TEMA 2.2.2 ========== -->
+      <article id="tema-2-2-2" class="tema">
+        <h2 class="section-title">2.2.2 Registros de control y de estados</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Estos registros son utilizados por la Unidad de Control para gestionar el procesador. El programador no puede modificarlos directamente. Entre los más importantes encontramos:</p>
+            <p><strong>Contador de Programa (PC):</strong> Indica la dirección de memoria de la siguiente instrucción a ejecutar.<br>
+            <strong>Registro de Instrucción (IR):</strong> Almacena la instrucción que se está decodificando actualmente.<br>
+            <strong>Registro de Estado (PSW):</strong> Contiene banderas (flags) que indican el resultado de la última operación (ej. bandera de cero, de desbordamiento o de acarreo).</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_2_2_01.png" alt="Registros de control">
+            <span class="image-caption">Registro de estado (PSW) y sus banderas.</span>
+          </div>
+        </div>
+      </article>
 
-      <section id="tema-2-2-3" class="tema tema-sub">
-        <span class="tema-num">2.2.3</span>
-        <h3>Ejemplos de registros de CPU reales</h3>
-        <p>Contenido del subtema 2.2.3. Aquí van ejemplos reales con CPUs como Intel, AMD, ARM.</p>
-      </section>
+      <!-- ========== TEMA 2.2.3 ========== -->
+      <article id="tema-2-2-3" class="tema">
+        <h2 class="section-title">2.2.3 Ejemplos de registros de CPU reales</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>Dependiendo de la arquitectura, los nombres y la cantidad de registros cambian. En procesadores <strong>Intel (x86-64)</strong>, tenemos registros de 64 bits como RAX, RBX, RCX, y una serie de registros de extensión (R8 a R15).</p>
+            <p>En arquitecturas <strong>ARM</strong> (comunes en celulares), los registros se denominan R0 a R15, donde el R15 es el PC y el R14 es el registro de enlace (LR) para llamadas a funciones. En <strong>MIPS</strong>, los registros se conocen por nombres especiales ($zero, $t0, $a0, $s0).</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_2_3_01.png" alt="Ejemplos de registros reales">
+            <span class="image-caption">Comparativa de registros entre arquitecturas Intel, ARM y MIPS.</span>
+          </div>
+        </div>
+      </article>
 
       <!-- ========== TEMA 2.3 ========== -->
-      <section id="tema-2-3" class="tema">
-        <span class="tema-num">2.3</span>
-        <h2>El ciclo de instrucción</h2>
-        <p>Contenido del tema 2.3. Aquí va la explicación general del ciclo de instrucción.</p>
-      </section>
+      <article id="tema-2-3" class="tema">
+        <h2 class="section-title">2.3 El ciclo de instrucción</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>El procesador funciona en un bucle infinito ejecutando millones de operaciones por segundo. A este proceso se le conoce como el Ciclo de Instrucción, el cual consta básicamente de tres etapas: Búsqueda (Fetch), Decodificación (Decode) y Ejecución (Execute).</p>
+            <p>Todo comienza cuando el PC indica dónde está la siguiente instrucción, la CPU la trae de la RAM a su registro de instrucción, la decodifica para saber qué debe hacer, y finalmente la ejecuta.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_3_01.png" alt="Ciclo de instrucción">
+            <span class="image-caption">Fases del ciclo básico de instrucción.</span>
+          </div>
+        </div>
+      </article>
 
-      <section id="tema-2-3-1" class="tema tema-sub">
-        <span class="tema-num">2.3.1</span>
-        <h3>Ciclo Fetch-Decode-Execute</h3>
-        <p>Contenido del subtema 2.3.1. Aquí va la explicación de las 3 etapas: búsqueda, decodificación y ejecución.</p>
-      </section>
+      <!-- ========== TEMA 2.3.1 ========== -->
+      <article id="tema-2-3-1" class="tema">
+        <h2 class="section-title">2.3.1 Ciclo Fetch-Decode-Execute</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p><strong>Fetch (Búsqueda):</strong> La CPU lee la instrucción de la memoria en la dirección apuntada por el PC e incrementa el PC para la próxima instrucción.<br>
+            <strong>Decode (Decodificación):</strong> La Unidad de Control analiza los bits de la instrucción para saber qué operación es, qué registros usa y si requiere datos de la memoria.<br>
+            <strong>Execute (Ejecución):</strong> La ALU realiza el cálculo o la operación lógica, y el resultado se guarda en un registro o en la memoria (fase de Write-back).</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_3_1_01.png" alt="Fetch Decode Execute">
+            <span class="image-caption">Flujo detallado del ciclo Fetch-Decode-Execute.</span>
+          </div>
+        </div>
+      </article>
 
-      <section id="tema-2-3-2" class="tema tema-sub">
-        <span class="tema-num">2.3.2</span>
-        <h3>Segmentación de instrucciones</h3>
-        <p>Contenido del subtema 2.3.2. Aquí va la explicación del pipeline (segmentación).</p>
-      </section>
+      <!-- ========== TEMA 2.3.2 ========== -->
+      <article id="tema-2-3-2" class="tema">
+        <h2 class="section-title">2.3.2 Segmentación de instrucciones</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>La segmentación (pipeline) es una técnica que permite ejecutar varias instrucciones de forma simultánea (en paralelo). Mientras una instrucción se está ejecutando, la siguiente se está decodificando, y la subsiguiente se está buscando.</p>
+            <p>Esto aumenta drásticamente el rendimiento (throughput) del procesador. Sin embargo, requiere manejar "riesgos" (hazards) como los conflictos de datos, donde una instrucción necesita el resultado de otra que aún no ha terminado.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_3_2_01.png" alt="Segmentación de instrucciones">
+            <span class="image-caption">Ejecución secuencial vs. ejecución segmentada (pipeline).</span>
+          </div>
+        </div>
+      </article>
 
-      <section id="tema-2-3-3" class="tema tema-sub">
-        <span class="tema-num">2.3.3</span>
-        <h3>Conjunto de instrucciones. Características y funciones</h3>
-        <p>Contenido del subtema 2.3.3. Aquí va la explicación del conjunto de instrucciones (ISA).</p>
-      </section>
+      <!-- ========== TEMA 2.3.3 ========== -->
+      <article id="tema-2-3-3" class="tema">
+        <h2 class="section-title">2.3.3 Conjunto de instrucciones</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>El conjunto de instrucciones (ISA - Instruction Set Architecture) es el vocabulario que entiende el procesador. Existen dos grandes filosofías:</p>
+            <p><strong>CISC (Complex Instruction Set Computer):</strong> Usado por Intel y AMD. Tiene instrucciones complejas que pueden hacer múltiples operaciones en una sola línea de código máquina (ej. x86).<br>
+            <strong>RISC (Reduced Instruction Set Computer):</strong> Usado por ARM y Apple Silicon. Tiene instrucciones simples y optimizadas que se ejecutan en un solo ciclo de reloj, lo que resulta en un menor consumo de energía.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_3_3_01.png" alt="Conjunto de instrucciones CISC vs RISC">
+            <span class="image-caption">Comparativa entre las filosofías CISC y RISC.</span>
+          </div>
+        </div>
+      </article>
 
-      <section id="tema-2-3-4" class="tema tema-sub">
-        <span class="tema-num">2.3.4</span>
-        <h3>Modos de direccionamiento</h3>
-        <p>Contenido del subtema 2.3.4. Aquí va la explicación de los modos de direccionamiento (inmediato, directo, indirecto, indexado, etc.).</p>
-      </section>
+      <!-- ========== TEMA 2.3.4 ========== -->
+      <article id="tema-2-3-4" class="tema">
+        <h2 class="section-title">2.3.4 Modos de direccionamiento</h2>
+        <div class="split-layout">
+          <div class="text-content">
+            <p>Los modos de direccionamiento indican cómo la CPU localiza los datos que necesita para operar. Pueden ser:</p>
+            <p><strong>Inmediato:</strong> El dato viene incluido directamente en la instrucción.<br>
+            <strong>Directo:</strong> La instrucción indica la dirección de memoria exacta donde está el dato.<br>
+            <strong>Indirecto:</strong> La instrucción indica una dirección de memoria, y en esa dirección está la dirección real del dato.<br>
+            <strong>Por registro:</strong> El dato está contenido dentro de un registro de la CPU.</p>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_3_4_01.png" alt="Modos de direccionamiento">
+            <span class="image-caption">Diferentes formas de localizar datos en memoria.</span>
+          </div>
+        </div>
+      </article>
 
       <!-- ========== TEMA 2.4 ========== -->
-      <section id="tema-2-4" class="tema">
-        <span class="tema-num">2.4</span>
-        <h2>Casos de estudio de CPU reales</h2>
-        <p>Contenido del tema 2.4. Aquí van casos prácticos con CPUs reales (Intel Core, AMD Ryzen, ARM Cortex, etc.).</p>
+      <article id="tema-2-4" class="tema">
+        <h2 class="section-title">2.4 Casos de estudio de CPU reales</h2>
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <p>Para cerrar la unidad, analicemos dos de los procesadores más importantes del mercado actual: el <strong>Intel Core i9</strong> y el <strong>AMD Ryzen 9</strong>. Ambos son procesadores de arquitectura x86-64 de alto rendimiento (CISC), pero con diseños internos muy distintos.</p>
+            <p>Mientras Intel utiliza un diseño monolítico, AMD utiliza un diseño de "chiplets" (varios chips pequeños trabajando juntos), lo que le permite fabricar procesadores con muchísimos núcleos a menor costo.</p>
+            
+            <div class="specs-table">
+              <h3>Comparativa Rápida de CPUs de Escritorio</h3>
+              <table>
+                <tr><td><strong>Intel Core i9-14900K</strong></td><td>24 núcleos / 32 hilos, hasta 6.0 GHz</td></tr>
+                <tr><td><strong>AMD Ryzen 9 7950X</strong></td><td>16 núcleos / 32 hilos, hasta 5.7 GHz</td></tr>
+                <tr><td><strong>Arquitectura</strong></td><td>x86-64 (CISC)</td></tr>
+                <tr><td><strong>Zócalo</strong></td><td>LGA 1700 (Intel) / AM5 (AMD)</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="image-content">
+            <img src="imagenes/unidades/unidad2/2_4_01.png" alt="Casos de estudio CPU">
+            <span class="image-caption">Procesadores Intel Core i9 y AMD Ryzen 9.</span>
+          </div>
+        </div>
+      </article>
+      <!-- ========== PRESENTACIÓN PROCESADORES INTEL Y AMD ========== -->
+      <section id="presentacion-cpus" class="tema" style="margin-top: 8rem;">
+        <h2 class="section-title">Procesadores Intel y AMD</h2>
+        <p style="color: #888; margin-bottom: 1.5rem;">Analiza a fondo las características y diferencias de los procesadores que dominan el mercado actual.</p>
+        
+        <div class="presentation-wrapper">
+          <!-- OJO: Asegúrate de que el nombre del archivo PDF coincida con el que tienes en tu carpeta -->
+          <iframe src="pdfs/presentaciones/procesadores_intel_amd.pdf" frameborder="0" width="100%" height="600" allowfullscreen="true" 
+           style="border: none; border-radius: 8px; background: #fff;">
+          </iframe>
+        </div>
       </section>
 
-      <!-- Pie de la unidad -->
+      <!-- ========== PRESENTACIÓN INTEGRADA ========== -->
+      <section id="presentacion-unidad2" class="tema" style="margin-top: 8rem;">
+        <h2 class="section-title">Presentación de la Unidad 2</h2>
+        <p style="color: #888; margin-bottom: 1.5rem;">Repasa los conceptos clave con la presentación completa de la unidad.</p>
+        
+        <div class="presentation-wrapper">
+          <iframe src="pdfs/presentaciones/unidad2.pdf" frameborder="0" width="100%" height="600" allowfullscreen="true" 
+           style="border: none; border-radius: 8px; background: #fff;">
+          </iframe>
+        </div>
+      </section>
+
       <div class="unit-footer">
         <a href="index.html" class="back-link">← Volver al menú principal</a>
       </div>
-
-    </main>
+      
+      <!-- PIE DE PÁGINA (Idéntico al index) -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="dot"></span>
+            <span>Arquitectura de Computadoras · ITS</span>
+          </div>
+          <div class="footer-links">
+            <a href="unidad1.html">Unidad 1</a>
+            <a href="unidad2.html">Unidad 2</a>
+            <a href="unidad3.html">Unidad 3</a>
+            <a href="unidad4.html">Unidad 4</a>
+          </div>
+          <div class="footer-copy">
+            © 2026 · <span>Todos los derechos reservados</span>
+          </div>
+        </div>
+      </footer>
   </div>
+
   <!-- Botón flotante para volver al menú -->
   <a href="index.html" class="floating-home-btn" aria-label="Volver al menú principal">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -156,6 +359,7 @@
       <polyline points="9 22 9 12 15 12 15 22"/>
     </svg>
   </a>
+
   <script src="script.js"></script>
 </body>
 </html>
